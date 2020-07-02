@@ -1,27 +1,36 @@
+// Colours
+
+$colour-1: #0B0C10;
+$colour-2: #1F2833;
+$colour-3: #C5C6C7;
+$colour-4: #66FCF1;
+$colour-5: #45A29E;
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-image: linear-gradient($colour-1 60%, $colour-2 200%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+}
+
+@font-face {
+  font-family: 'BuiltSB';
+  src: local('BuiltSB'), url('./fonts/built-titling-sb.ttf') format('truetype');
+}
+
+.title {
+  font-family: BuiltSB;
+  color: $colour-4;
+  font-size: 10rem;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .App-link {
