@@ -8,11 +8,16 @@ $colour-5: #45A29E;
 
 .everything {
   text-align: center;
-  background-image: linear-gradient($colour-1 50%, $colour-2 200%);
+  background-image: repeating-linear-gradient($colour-2 100%, $colour-1 200%, $colour-2 300%);
   height: 300vh;
   display: flex;
   flex-direction: column;
   color: white;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .stefancooper {
@@ -30,8 +35,19 @@ $colour-5: #45A29E;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   color: white;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.paperclicker{
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .App {
@@ -57,38 +73,43 @@ $colour-5: #45A29E;
 .title {
   font-family: BuiltSB;
   color: $colour-4;
-  font-size: 10rem;
-  user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  font-size: 20vh;
 }
 
 .portfolio-1 {
-  font-family: BuiltRG;
-  margin: 5%;
-  align-self: flex-start;
-  color: $colour-4;
-  font-size: 10rem;
-  user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
 }
 
-.portfolio-2 {
+.portfolio-1-title {
+  margin-left: 5%;
   font-family: BuiltRG;
-  margin: 5%;
-  align-self: flex-end;
   color: $colour-4;
-  font-size: 10rem;
-  user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  font-size: 20vh;
+}
+
+.portfolio-1-sub {
+  margin-left: 5%;
+  font-family: BuiltRG;
+  color: $colour-3;
+  font-size: 5.5vh;
+}
+
+.portfolio-2-title {
+  font-family: BuiltRG;
+  margin-right: 5%;
+  color: $colour-4;
+  font-size: 20vh;
+}
+
+.portfolio-2-sub {
+  font-family: BuiltRG;
+  margin-right: 5%;
+  color: $colour-3;
+  font-size: 5.5vh;
 }
 
 .App-link {

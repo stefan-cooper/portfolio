@@ -15,12 +15,14 @@ class App extends Component {
         </div>
         <div className="esportshub">
           <Zoom>
-            <p className='portfolio-1'> ESPORTS HUB </p>
+            <div className='portfolio-1-title'> ESPORTS HUB </div>
+            <div className='portfolio-1-sub'>A website hub for everything university esports</div>
           </Zoom>
         </div>
-        <div className="App">
+        <div className="paperclicker">
           <Zoom>
-            <p className='portfolio-2'> PAPER CLICKER </p>
+            <div className='portfolio-2-title'> PAPER CLICKER </div>
+            <div className='portfolio-2-sub'>A clicker game inspired by Universal Paperclips</div>
           </Zoom>
         </div>
       </div>
