@@ -6,10 +6,37 @@ $colour-3: #C5C6C7;
 $colour-4: #66FCF1;
 $colour-5: #45A29E;
 
+.everything {
+  text-align: center;
+  background-image: linear-gradient($colour-1 50%, $colour-2 200%);
+  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.stefancooper {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.esportshub {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
 .App {
   text-align: center;
-  background-image: linear-gradient($colour-1 60%, $colour-2 200%);
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,8 +49,39 @@ $colour-5: #45A29E;
   src: local('BuiltSB'), url('./fonts/built-titling-sb.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'BuiltRG';
+  src: local('BuiltRG'), url('./fonts/built-titling-rg.ttf') format('truetype');
+}
+
 .title {
   font-family: BuiltSB;
+  color: $colour-4;
+  font-size: 10rem;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.portfolio-1 {
+  font-family: BuiltRG;
+  margin: 5%;
+  align-self: flex-start;
+  color: $colour-4;
+  font-size: 10rem;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.portfolio-2 {
+  font-family: BuiltRG;
+  margin: 5%;
+  align-self: flex-end;
   color: $colour-4;
   font-size: 10rem;
   user-select: none;
