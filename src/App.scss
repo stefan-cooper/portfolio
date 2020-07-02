@@ -30,16 +30,6 @@ $colour-5: #45A29E;
   color: white;
 }
 
-.esportshub {
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  color: white;
-  align-items: flex-start;
-  justify-content: center;
-}
-
 .paperclicker{
   text-align: center;
   height: 100vh;
@@ -70,32 +60,58 @@ $colour-5: #45A29E;
   src: local('BuiltRG'), url('./fonts/built-titling-rg.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'BuiltLT';
+  src: local('BuiltLT'), url('./fonts/built-titling-lt.ttf') format('truetype');
+}
+
 .title {
   font-family: BuiltSB;
   color: $colour-4;
   font-size: 20vh;
 }
 
-.portfolio-1 {
+.esportshub {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+}
+
+.portfolio-1-text {
+  margin-left: 5%;
   display: flex;
   flex-direction: column;
+  color: white;
   align-items: flex-start;
   justify-content: center;
-
 }
 
 .portfolio-1-title {
-  margin-left: 5%;
   font-family: BuiltRG;
   color: $colour-4;
   font-size: 20vh;
 }
 
 .portfolio-1-sub {
-  margin-left: 5%;
   font-family: BuiltRG;
   color: $colour-3;
   font-size: 5.5vh;
+}
+
+.portfolio-1-tert {
+  font-family: BuiltLT;
+  color: $colour-5;
+  font-size: 5vh;
+}
+
+.portfolio-1-images {
+  margin-right: 5%;
+  align-self: center;
+  width: 45%;
+  height: auto;
 }
 
 .portfolio-2-title {
@@ -110,6 +126,13 @@ $colour-5: #45A29E;
   margin-right: 5%;
   color: $colour-3;
   font-size: 5.5vh;
+}
+
+.portfolio-2-tert {
+  font-family: BuiltLT;
+  margin-right: 5%;
+  color: $colour-5;
+  font-size: 5vh;
 }
 
 .App-link {
