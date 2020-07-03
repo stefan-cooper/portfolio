@@ -84,7 +84,6 @@ $colour-5: #45A29E;
   margin-left: 5%;
   display: flex;
   flex-direction: column;
-  color: white;
   align-items: flex-start;
   justify-content: center;
 }
@@ -107,10 +106,20 @@ $colour-5: #45A29E;
   font-size: 5vh;
 }
 
+.portfolio-1-images-div {
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 45%;
+}
+
 .portfolio-1-images {
   align-self: center;
-  width: 45%;
+  width: 90%;
   height: auto;
+  margin: 0.5rem;
 }
 
 .portfolio-2-title {
@@ -138,10 +147,6 @@ $colour-5: #45A29E;
   align-self: center;
 }
 
-.space-right {
-  margin-right: 5vh;
-}
-
 .chevron::before {
   border-style: solid;
   border-width: 0.25em 0.25em 0 0;
@@ -153,6 +158,7 @@ $colour-5: #45A29E;
   width: 0.45em;
   cursor: pointer;
   color: white;
+  margin: 0.5rem;
 }
 
 .chevron.left:before {
@@ -163,4 +169,14 @@ $colour-5: #45A29E;
 .chevron.right:before {
   left: 0;
   transform: rotate(45deg);
+}
+
+.chevron.up:before {
+  left: 0.25em;
+  transform: rotate(-45deg);
+}
+
+.chevron.down:before {
+  left: 0;
+  transform: rotate(135deg);
 }
