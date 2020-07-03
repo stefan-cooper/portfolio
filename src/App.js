@@ -20,7 +20,9 @@ class App extends Component {
               <div className='portfolio-1-sub'>A website hub for everything university esports</div>
               <div className='portfolio-1-tert'>REACT - EXPRESS - CLOUDANT - REDUX - ES6 </div>
             </div>
+            <span className='center chevron left'></span>
             <img className='portfolio-1-images' src={require("./test.png")}></img>
+            <span className='space-right center chevron right'></span>
           </Zoom>
         </div>
         <div className="paperclicker">
