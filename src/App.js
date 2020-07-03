@@ -1,10 +1,32 @@
 import React, { Component } from 'react';
 import Zoom from 'react-reveal/Zoom';
+import Reveal from 'react-reveal/Reveal'
 import './App.scss';
+
+const p1images = {image1: require("./test.png"),
+                  image2: require("./test.png"),
+                  image3: require("./test.png"),
+                  image4: require("./test.png")}
 
 class App extends Component {
   constructor(props) {
     super(props)
+
+    this.state = {
+      p1imagesCount: 1
+    }
+  }
+
+  
+
+  changeImages() {
+    this.setState({p1imagesCount: this.state.p1imagesCount+1})
+    return (
+      <Reveal effect='fadeInUp'>
+        <img className='portfolio-1-images' src={require("./test.png")}></img>
+        <img className='portfolio-1-images' src={require("./test.png")}></img>
+      </Reveal>
+    )
   }
 
   render() {
@@ -20,13 +42,13 @@ class App extends Component {
               <div className='portfolio-1-sub'>A website hub for everything university esports</div>
               <div className='portfolio-1-tert'>REACT - EXPRESS - CLOUDANT - REDUX - ES6 </div>
             </div>
-            <div className='portfolio-1-images-div'>
-              <span className='center chevron up'></span>
-              <img className='portfolio-1-images' src={require("./test.png")}></img>
-              <img className='portfolio-1-images' src={require("./test.png")}></img>
-              <span className='center chevron down'></span>
-            </div>
           </Zoom>
+          <div className='portfolio-1-images-div'>
+            <span onClick={() => this.changeImages()} className='center chevron up'></span>
+            <img className='portfolio-1-images fade-in' src={p1images["image"+this.state.p1imagesCount]}></img>
+            <img className='portfolio-1-images fade-in' src={p1images["image"+(this.state.p1imagesCount+1)]}></img>
+            <span className='center chevron down'></span>
+          </div>
         </div>
         <div className="paperclicker">
           <Zoom>
