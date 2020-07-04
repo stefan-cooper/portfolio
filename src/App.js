@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import Zoom from 'react-reveal/Zoom';
-import Reveal from 'react-reveal/Reveal'
 import './App.scss';
 
 const p1images = {image1: require("./images/feed1.png"),
                   image2: require("./images/feed2.png"),
-                  image3: require("./images/login1.png"),
-                  image4: require("./images/profile1.png"),
-                  image5: require("./images/register1.png"),
-                  image6: require("./images/schedule1.png"),
-                  image7: require("./images/schedule2.png"),
-                  image8: require("./images/teams1.png"),
-                  image9: require("./images/teams2.png"),
-                  image10: require("./images/teams3.png")}
+                  image3: require("./images/schedule1.png"),
+                  image4: require("./images/schedule2.png"),
+                  image5: require("./images/teams1.png"),
+                  image6: require("./images/teams2.png"),
+                  image7: require("./images/teams3.png"),
+                  image8: require("./images/login1.png"),
+                  image9: require("./images/register1.png"),
+                  image10: require("./images/profile1.png")}
+
+const p2images = {image1: require("./images/earlygame1.png"),
+                  image2: require("./images/earlygame2.png"),
+                  image3: require("./images/earlygame3.png")}
 
 class App extends Component {
   constructor(props) {
@@ -20,11 +23,13 @@ class App extends Component {
 
     this.state = {
       p1imagesCount: 1,
-      fadein1: true
+      p2imagesCount: 1,
+      fadein1: true,
+      fadein2: true
     }
   }
 
-  changeImages(direction) {
+  changeImagesEsportsHub(direction) {
     if (direction === 'down') {
       if (this.state.p1imagesCount + 1 < Object.keys(p1images).length)
         this.setState({p1imagesCount: this.state.p1imagesCount+1, fadein1: true})
@@ -35,6 +40,20 @@ class App extends Component {
         this.setState({p1imagesCount: this.state.p1imagesCount-1, fadein1: true})
       else
         this.setState({p1imagesCount: Object.keys(p1images).length-1, fadein1: true})
+    }
+  }
+
+  changeImagesPaperClicker(direction) {
+    if (direction === 'down') {
+      if (this.state.p2imagesCount + 1 < Object.keys(p2images).length)
+        this.setState({p2imagesCount: this.state.p2imagesCount+1, fadein2: true})
+      else
+      this.setState({p2imagesCount: 1, fadein2: true})
+    } else if (direction === 'up') {
+      if (this.state.p2imagesCount > 1)
+        this.setState({p2imagesCount: this.state.p2imagesCount-1, fadein2: true})
+      else
+        this.setState({p2imagesCount: Object.keys(p2images).length-1, fadein2: true})
     }
   }
 
@@ -54,18 +73,28 @@ class App extends Component {
           </div>
           <Zoom left cascade>
             <div onAnimationEnd={() => this.setState({fadein1: false})} className={this.state.fadein1 ? 'portfolio-1-images-div fade-in' : 'portfolio-1-images-div' }>
-              <span onClick={() => this.changeImages('up')} className='center chevron up'></span>
-              <img className='portfolio-1-images' src={p1images["image"+this.state.p1imagesCount]}></img>
-              <img className='portfolio-1-images' src={p1images["image"+(this.state.p1imagesCount+1)]}></img>
-              <span onClick={() => this.changeImages('down')} className='center chevron down'></span>
+              <span onClick={() => this.changeImagesEsportsHub('up')} className='center chevron up'></span>
+              <img alt='Examplar Esports Hub 1' className='portfolio-1-images' src={p1images["image"+this.state.p1imagesCount]}></img>
+              <img alt='Examplar Esports Hub 2' className='portfolio-1-images' src={p1images["image"+(this.state.p1imagesCount+1)]}></img>
+              <span onClick={() => this.changeImagesEsportsHub('down')} className='center chevron down'></span>
             </div>
           </Zoom>
         </div>
         <div className="paperclicker">
+          <div className='portfolio-2-text'>
+            <Zoom right cascade>
+              <div className='portfolio-2-title'>PAPERCLICKER</div>
+              <div className='portfolio-2-sub'>A clicker game inspired by Universal Paperclips</div>
+              <div className='portfolio-2-tert'>REACT - REDUX - ES6 </div>
+            </Zoom>
+          </div>
           <Zoom right cascade>
-            <div className='portfolio-2-title'> PAPER CLICKER </div>
-            <div className='portfolio-2-sub'>A clicker game inspired by Universal Paperclips</div>
-            <div className='portfolio-2-tert'>REACT - REDUX - ES6 </div>
+            <div onAnimationEnd={() => this.setState({fadein2: false})} className={this.state.fadein2 ? 'portfolio-2-images-div fade-in' : 'portfolio-2-images-div' }>
+              <span onClick={() => this.changeImagesPaperClicker('up')} className='center chevron up'></span>
+              <img alt='Examplar Paper Clicker 1' className='portfolio-1-images' src={p2images["image"+this.state.p2imagesCount]}></img>
+              <img alt='Examplar Paper Clicker 2' className='portfolio-1-images' src={p2images["image"+(this.state.p2imagesCount+1)]}></img>
+              <span onClick={() => this.changeImagesPaperClicker('down')} className='center chevron down'></span>
+            </div>
           </Zoom>
         </div>
       </div>
