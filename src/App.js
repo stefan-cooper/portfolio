@@ -11,7 +11,8 @@ const p1images = {image1: require("./images/feed1.png"),
                   image7: require("./images/teams3.png"),
                   image8: require("./images/login1.png"),
                   image9: require("./images/register1.png"),
-                  image10: require("./images/profile1.png")}
+                  image10: require("./images/profile1.png"),
+                  image11: require("./images/feed1.png")}
 
 const p2images = {image1: require("./images/earlygame1.png"),
                   image2: require("./images/earlygame2.png"),
@@ -96,6 +97,12 @@ class App extends Component {
               <span onClick={() => this.changeImagesPaperClicker('down')} className='center chevron down'></span>
             </div>
           </Zoom>
+        </div>
+        <div className='otherProjects'>
+          <div className='portfolio-3-title'> OTHER PROJECTS & EXPERIENCE </div>
+        </div>
+        <div className='about'>
+          <div className='about-title'> ABOUT ME </div>
         </div>
       </div>
 

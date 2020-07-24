@@ -9,7 +9,7 @@ $colour-5: #45A29E;
 .everything {
   text-align: center;
   background-image: repeating-linear-gradient($colour-2 100%, $colour-1 200%, $colour-2 300%);
-  height: 300vh;
+  height: 500vh;
   display: flex;
   flex-direction: column;
   color: white;
@@ -161,6 +161,38 @@ $colour-5: #45A29E;
   color: $colour-5;
   font-size: 5vh;
   align-self: flex-end;
+}
+
+.otherProjects {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-between;
+}
+
+.portfolio-3-title {
+  font-family: BuiltRG;
+  color: $colour-4;
+  font-size: 12vh;
+  align-self: center;
+}
+
+.about {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-between;
+}
+
+.about-title {
+  font-family: BuiltRG;
+  color: $colour-4;
+  font-size: 12vh;
+  align-self: center;
 }
 
 .center {
