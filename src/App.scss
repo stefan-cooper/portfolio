@@ -183,15 +183,56 @@ $colour-5: #45A29E;
   text-align: center;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   color: white;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .about-title {
   font-family: BuiltRG;
   color: $colour-4;
   font-size: 12vh;
+  align-self: center;
+  margin-top: 2rem;
+}
+
+.github {
+  width: 8vh;
+  height: 8vh;
+  cursor: pointer;
+}
+
+.github:hover {
+  filter: brightness(0.8);
+}
+
+.twitter {
+  width: 8vh;
+  height: 8vh;
+  cursor: pointer;
+}
+
+.twitter:hover {
+  filter: brightness(0.8);
+}
+
+.pic-content {
+  display: flex;
+  flex-direction: center;
+  align-content: center;
+  margin: 20vh;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pic {
+  border-radius: 50%;
+  width: auto;
+  height: 70vh;
   align-self: center;
 }
 

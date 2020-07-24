@@ -102,7 +102,18 @@ class App extends Component {
           <div className='portfolio-3-title'> OTHER PROJECTS & EXPERIENCE </div>
         </div>
         <div className='about'>
-          <div className='about-title'> ABOUT ME </div>
+          <div className='pic-content'>
+            <img className='pic' src={require('./images/about.png')}></img>
+          </div>
+          <div className='about-content'>
+            <div className='about-title'> ABOUT ME </div>
+            <div>
+              <a href={'https://github.com/3eak'}><img className='github' src={require('./images/github.png')}></img></a>
+              <a href={'https://twitter.com/3eakStefan'}><img className='twitter' src={require('./images/twitter.png')}></img></a>
+              <a href={'https://www.linkedin.com/in/stefan-cooper-491355171/'}><img className='twitter' src={require('./images/li.png')}></img></a>
+            </div>
+
+          </div>
         </div>
       </div>
 
