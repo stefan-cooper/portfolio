@@ -169,7 +169,50 @@ $colour-5: #45A29E;
   display: flex;
   flex-direction: column;
   color: white;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+
+.otherProjects-collection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  height: 100%;
+}
+
+.otherProjects-ibm {
+  width: 40vh;
+  height: 50vh;
+  align-self: center;
+}
+
+.ibm {
+  width: auto;
+  height: 25%;
+  margin-top: 10%;
+}
+
+.otherProjects-uh {
+  width: 40vh;
+  height: 50vh;
+  align-self: center;
+}
+
+.uh {
+  width: auto;
+  height: 15%;
+  margin-top: 15%;
+}
+
+.otherProjects-hertsgg {
+  width: 40vh;
+  height: 50vh;
+  align-self: center;
+}
+
+.hertsgg {
+  width: 45%;
+  height: auto;
 }
 
 .portfolio-3-title {
@@ -177,6 +220,16 @@ $colour-5: #45A29E;
   color: $colour-4;
   font-size: 12vh;
   align-self: center;
+  margin: 2rem;
+}
+
+.otherProjects-content {
+  color: $colour-3;
+  font-size: 6vh;
+  font-family: BuiltLT;
+  white-space: pre-wrap;
+  margin-top: 1rem;
+  font-style: italic;
 }
 
 .about {
@@ -193,6 +246,29 @@ $colour-5: #45A29E;
   color: $colour-4;
   font-size: 12vh;
   align-self: center;
+  margin-top: 2rem;
+}
+
+.about-text {
+  font-family: BuiltLT;
+  color: $colour-3;
+  font-size: 4vh;
+  align-self: center;
+  margin-top: 2rem;
+  width: 80%;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-self: center;
+}
+
+.urls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   margin-top: 2rem;
 }
 
@@ -221,12 +297,6 @@ $colour-5: #45A29E;
   flex-direction: center;
   align-content: center;
   margin: 20vh;
-}
-
-.about-content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
 }
 
 .pic {
