@@ -1,0 +1,114 @@
+self.__precacheManifest = (self.__precacheManifest || []).concat([
+  {
+    "revision": "0eb02042dec69acffe69eae5c332afb2",
+    "url": "/portfolio/index.html"
+  },
+  {
+    "revision": "a907845e01d7602ec66e",
+    "url": "/portfolio/static/css/main.eaa416fe.chunk.css"
+  },
+  {
+    "revision": "2fcf5c528e6ea8c4d7be",
+    "url": "/portfolio/static/js/2.ffca2585.chunk.js"
+  },
+  {
+    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
+    "url": "/portfolio/static/js/2.ffca2585.chunk.js.LICENSE.txt"
+  },
+  {
+    "revision": "a907845e01d7602ec66e",
+    "url": "/portfolio/static/js/main.1ed34fad.chunk.js"
+  },
+  {
+    "revision": "7a6cc99bd8f08f9fa6ec",
+    "url": "/portfolio/static/js/runtime-main.209c2d7e.js"
+  },
+  {
+    "revision": "6876e421c922e380473c8f941f94410d",
+    "url": "/portfolio/static/media/ArcaMajora3-Bold.6876e421.ttf"
+  },
+  {
+    "revision": "f265c1afe70ba3644194b312f3ddb0a8",
+    "url": "/portfolio/static/media/ArcaMajora3-Heavy.f265c1af.ttf"
+  },
+  {
+    "revision": "80266128d67027be1c9687672729ab1e",
+    "url": "/portfolio/static/media/about.80266128.png"
+  },
+  {
+    "revision": "4faa75407e54cf278b83747ecacc7439",
+    "url": "/portfolio/static/media/built-titling-lt.4faa7540.ttf"
+  },
+  {
+    "revision": "ebced14106f874979db9a35d284bc6da",
+    "url": "/portfolio/static/media/built-titling-rg.ebced141.ttf"
+  },
+  {
+    "revision": "a48e5acc8a103505d8b2277a22be0461",
+    "url": "/portfolio/static/media/built-titling-sb.a48e5acc.ttf"
+  },
+  {
+    "revision": "359f759161347d3f892cc4ab3b243331",
+    "url": "/portfolio/static/media/earlygame1.359f7591.png"
+  },
+  {
+    "revision": "1723675c6eed61607ef55bd58db3362f",
+    "url": "/portfolio/static/media/earlygame2.1723675c.png"
+  },
+  {
+    "revision": "1723675c6eed61607ef55bd58db3362f",
+    "url": "/portfolio/static/media/earlygame3.1723675c.png"
+  },
+  {
+    "revision": "79a64d7763a8e2b224ba0d0426e9c30a",
+    "url": "/portfolio/static/media/feed1.79a64d77.png"
+  },
+  {
+    "revision": "97d3f525f5f7a4c2a1630a23221d8caf",
+    "url": "/portfolio/static/media/feed2.97d3f525.png"
+  },
+  {
+    "revision": "d8c5a819ec50c32a40fb4397cc37e5b8",
+    "url": "/portfolio/static/media/hertsgg.d8c5a819.png"
+  },
+  {
+    "revision": "96a91b127f70425bbfa3fd70c3cb8112",
+    "url": "/portfolio/static/media/ibm.96a91b12.png"
+  },
+  {
+    "revision": "dca8702dd0f2632b76c4bbe530dc5040",
+    "url": "/portfolio/static/media/login1.dca8702d.png"
+  },
+  {
+    "revision": "5315480d2219d58d0aa1596d8ba93008",
+    "url": "/portfolio/static/media/profile1.5315480d.png"
+  },
+  {
+    "revision": "b7b462bcb9ea9fc518b391bec9d3d88d",
+    "url": "/portfolio/static/media/register1.b7b462bc.png"
+  },
+  {
+    "revision": "ecf95e3c37ca134462544ddd2523cd7a",
+    "url": "/portfolio/static/media/schedule1.ecf95e3c.png"
+  },
+  {
+    "revision": "4cd833321f3e6e52cdec4be597741e59",
+    "url": "/portfolio/static/media/schedule2.4cd83332.png"
+  },
+  {
+    "revision": "1aacb979aba4d4c1419d6456133afb89",
+    "url": "/portfolio/static/media/teams1.1aacb979.png"
+  },
+  {
+    "revision": "ba5d3850568caf4b012c10fa5f60725c",
+    "url": "/portfolio/static/media/teams2.ba5d3850.png"
+  },
+  {
+    "revision": "f2d2725f0c3d82337fd9e3cab513b489",
+    "url": "/portfolio/static/media/teams3.f2d2725f.png"
+  },
+  {
+    "revision": "9ac3af7458ef540b763f13d339c79574",
+    "url": "/portfolio/static/media/uh.9ac3af74.png"
+  }
+]);
