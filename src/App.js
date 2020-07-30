@@ -146,7 +146,6 @@ class App extends Component {
               <a target='_blank' rel='noopener noreferrer' href={'https://twitter.com/3eakStefan'}><img alt='Twitter Logo' className='twitter' src={require('./images/twitter.png')}></img></a>
               <a target='_blank' rel='noopener noreferrer' href={'https://www.linkedin.com/in/stefan-cooper-491355171/'}><img alt='Linkedin Logo' className='twitter' src={require('./images/li.png')}></img></a>
             </div>
-
           </div>
         </div>
       </div>
