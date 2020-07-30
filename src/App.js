@@ -70,7 +70,10 @@ class App extends Component {
               <div className='portfolio-1-title'>ESPORTS HUB </div>
               <div className='portfolio-1-sub'>A website hub for everything university esports</div>
               <div className='portfolio-1-tert'>REACT - EXPRESS - CLOUDANT - REDUX - ES6 </div>
-              <a className='portfolio-1-github' target='_blank' rel='noopener noreferrer' href={'https://github.com/3eak/esportshub-server'}><img alt='GitHub Logo' className='github' src={require('./images/github.png')}></img></a>
+              <div className='portfolio-1-links'>
+                <a className='portfolio-1-links-pics' target='_blank' rel='noopener noreferrer' href={'https://github.com/3eak/esportshub-server'}><img alt='GitHub Logo' className='github' src={require('./images/github.png')}></img></a>
+                <a className='portfolio-1-links-pics' target='_blank' rel='noopener noreferrer' href={'https://hub.stefancooper.com'}><img alt='Web Logo' className='github' src={require('./images/web.png')}></img></a>
+              </div>
             </Zoom>
           </div>
           <Zoom left cascade>
@@ -88,7 +91,10 @@ class App extends Component {
               <div className='portfolio-2-title'>PAPERCLICKER</div>
               <div className='portfolio-2-sub'>A clicker game inspired by Universal Paperclips</div>
               <div className='portfolio-2-tert'>REACT - REDUX - ES6 </div>
-              <a className='portfolio-2-github' target='_blank' rel='noopener noreferrer' href={'https://github.com/3eak/paper-clicker'}><img alt='GitHub Logo' className='github' src={require('./images/github.png')}></img></a>
+              <div className='portfolio-2-links'>
+                <a className='portfolio-2-links-pics' target='_blank' rel='noopener noreferrer' href={'http://clicker.stefancooper.com'}><img alt='Web Logo' className='github' src={require('./images/web.png')}></img></a>
+                <a className='portfolio-2-links-pics' target='_blank' rel='noopener noreferrer' href={'https://github.com/3eak/paper-clicker'}><img alt='GitHub Logo' className='github' src={require('./images/github.png')}></img></a>
+              </div>
             </Zoom>
           </div>
           <Zoom right cascade>

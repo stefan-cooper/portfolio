@@ -106,9 +106,13 @@ $colour-5: #45A29E;
   font-size: 5vh;
 }
 
-.portfolio-1-github {
+.portfolio-1-links {
   margin-top: 1rem;
-  filter: brightness(0.8);
+}
+
+.portfolio-1-links-pics {
+  margin: 0.5rem;
+  filter: brightness(0.85);
 }
 
 .portfolio-1-images-div {
@@ -178,10 +182,14 @@ $colour-5: #45A29E;
   align-self: flex-end;
 }
 
-.portfolio-2-github {
+.portfolio-2-links {
   margin-top: 1rem;
-  filter: brightness(0.8);
   align-self: flex-end;
+}
+
+.portfolio-2-links-pics {
+  margin: 0.5rem;
+  filter: brightness(0.85);
 }
 
 .otherProjects {
