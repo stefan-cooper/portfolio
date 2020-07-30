@@ -55,6 +55,16 @@ $colour-5: #45A29E;
   src: local('BuiltLT'), url('./fonts/built-titling-lt.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'ArcaMajora3-Bold';
+  src: local('ArcaMajora3-Bold'), url('./fonts/ArcaMajora3-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ArcaMajora3-Heavy';
+  src: local('ArcaMajora3-Heavy'), url('./fonts/ArcaMajora3-Heavy.ttf') format('truetype');
+}
+
 .title {
   font-family: BuiltSB;
   color: $colour-4;
@@ -94,6 +104,11 @@ $colour-5: #45A29E;
   font-family: BuiltLT;
   color: $colour-5;
   font-size: 5vh;
+}
+
+.portfolio-1-github {
+  margin-top: 1rem;
+  filter: brightness(0.8);
 }
 
 .portfolio-1-images-div {
@@ -163,51 +178,55 @@ $colour-5: #45A29E;
   align-self: flex-end;
 }
 
+.portfolio-2-github {
+  margin-top: 1rem;
+  filter: brightness(0.8);
+  align-self: flex-end;
+}
+
 .otherProjects {
   text-align: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
   color: white;
-  justify-content: space-evenly;
 }
 
 .otherProjects-collection {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-content: center;
-  height: 100%;
+  margin-top: 5vh;
 }
 
 .otherProjects-ibm {
   width: 40vh;
-  height: 50vh;
+  height: 20vh;
+  align-self: center;
+}
+
+.otherProjects-uh {
+  width: 40vh;
+  height: 20vh;
+  align-self: center;
+}
+
+.otherProjects-hertsgg {
+  width: 40vh;
+  height: 20vh;
   align-self: center;
 }
 
 .ibm {
   width: auto;
-  height: 25%;
+  height: 55%;
   margin-top: 10%;
-}
-
-.otherProjects-uh {
-  width: 40vh;
-  height: 50vh;
-  align-self: center;
 }
 
 .uh {
   width: auto;
-  height: 15%;
+  height: 35%;
   margin-top: 15%;
-}
-
-.otherProjects-hertsgg {
-  width: 40vh;
-  height: 50vh;
-  align-self: center;
 }
 
 .hertsgg {
@@ -215,21 +234,25 @@ $colour-5: #45A29E;
   height: auto;
 }
 
-.portfolio-3-title {
+.otherProjects-title {
   font-family: BuiltRG;
   color: $colour-4;
   font-size: 12vh;
-  align-self: center;
-  margin: 2rem;
+}
+
+.otherProjects-content-title {
+  color: $colour-3;
+  font-size: 2vh;
+  font-family: ArcaMajora3-Heavy;
+  white-space: pre-wrap;
 }
 
 .otherProjects-content {
   color: $colour-3;
-  font-size: 6vh;
-  font-family: BuiltLT;
+  font-size: 2vh;
+  font-family: ArcaMajora3-Bold;
+  width: 40vh;
   white-space: pre-wrap;
-  margin-top: 1rem;
-  font-style: italic;
 }
 
 .about {
@@ -250,9 +273,9 @@ $colour-5: #45A29E;
 }
 
 .about-text {
-  font-family: BuiltLT;
+  font-family: ArcaMajora3-Bold;
   color: $colour-3;
-  font-size: 4vh;
+  font-size: 2.5vh;
   align-self: center;
   margin-top: 2rem;
   width: 80%;
@@ -276,6 +299,7 @@ $colour-5: #45A29E;
   width: 8vh;
   height: 8vh;
   cursor: pointer;
+  filter: brightness(0.9);
 }
 
 .github:hover {
@@ -286,6 +310,7 @@ $colour-5: #45A29E;
   width: 8vh;
   height: 8vh;
   cursor: pointer;
+  filter: brightness(0.9);
 }
 
 .twitter:hover {

@@ -70,6 +70,7 @@ class App extends Component {
               <div className='portfolio-1-title'>ESPORTS HUB </div>
               <div className='portfolio-1-sub'>A website hub for everything university esports</div>
               <div className='portfolio-1-tert'>REACT - EXPRESS - CLOUDANT - REDUX - ES6 </div>
+              <a className='portfolio-1-github' target='_blank' rel='noopener noreferrer' href={'https://github.com/3eak/esportshub-server'}><img alt='GitHub Logo' className='github' src={require('./images/github.png')}></img></a>
             </Zoom>
           </div>
           <Zoom left cascade>
@@ -87,6 +88,7 @@ class App extends Component {
               <div className='portfolio-2-title'>PAPERCLICKER</div>
               <div className='portfolio-2-sub'>A clicker game inspired by Universal Paperclips</div>
               <div className='portfolio-2-tert'>REACT - REDUX - ES6 </div>
+              <a className='portfolio-2-github' target='_blank' rel='noopener noreferrer' href={'https://github.com/3eak/paper-clicker'}><img alt='GitHub Logo' className='github' src={require('./images/github.png')}></img></a>
             </Zoom>
           </div>
           <Zoom right cascade>
@@ -99,28 +101,33 @@ class App extends Component {
           </Zoom>
         </div>
         <div className='otherProjects'>
-          <div className='portfolio-3-title'> OTHER PROJECTS & EXPERIENCE </div>
+          <div className='otherProjects-title'> OTHER PROJECTS & EXPERIENCE </div>
           <div className='otherProjects-collection'>
             <div className='otherProjects-ibm'>
               <img alt='IBM Logo' className='ibm' src={require('./images/ibm.png')}></img>
-              <div className='otherProjects-content'>
-                Daeja ViewOne<br/>
-                Early Professionals Hub
-                
+              <div className='otherProjects-content'><br /><br />
+                <p className='otherProjects-content-title'>Daeja ViewONE Virtual</p>
+                Working as a developer here I have been a part of an agile development cycle. Developing in a variety of languages from XML to Java. Whilst working in the Daeja team I have worked on many different projects, furthering my knowledge of automated testing with technologies (Vagrant, Selenium, REST tests). As well as working in a complex and large codebase that has been maintained for a long time.<br/>
+                <p className='otherProjects-content-title'>Early Professionals Hub</p>
+                Whilst at IBM I worked on a giveback team of interns on the EPH (Early Professionals Hub).A web-based project written in React using a variety of web based libraries such as Redux. The site interacts with a cloud based database (IBM Cloudant) to maintain information on its users and various data tracking.
               </div>
             </div>
             <div className='otherProjects-uh'>
               <img alt='UH Logo' className='uh' src={require('./images/uh.png')}></img>
-              <div className='otherProjects-content'>
-                Lorem<br/>
-                Ipsum
+              <div className='otherProjects-content'><br /><br />
+                <p className='otherProjects-content-title'>Computer Science (Software Engineering) (2016-2020)</p>
+                I have grown a lot throughout my time at university, achieving a First Class with Honours averaging an 84% across my modules. Notable module grades include Software Engineering Practice (94%), Mobile Computing (85%) and Software Engineering Project (84%). Furthermore, I have interacted with many extra-curricular activities such as working on the Esports Society and being a voting member on the Student Council.
+                <p className='otherProjects-content-title'>Projects and Experiences</p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ante arcu. Ut vel augue nec tortor tempus tempus sed vitae dolor.
               </div>
             </div>
             <div className='otherProjects-hertsgg'>
               <img alt='hertsgg Logo' className='hertsgg' src={require('./images/hertsgg.png')}></img>
               <div className='otherProjects-content'>
-                Lorem<br/>
-                Ipsum
+                <p className='otherProjects-content-title'>Chair for Esports Society (2019-2020)</p>
+                I am responsible for managing the committee and ensuring the society continues to thrive as one of the premier esports societies in the country. Including maintaining and holding talks with our associated sponsors including Overclockers UK and ASUS ROG.
+                <p className='otherProjects-content-title'>Treasurer for Esports Society (2017-2019)</p>
+                I am responsible for the outgoing transactions and understand the financing of the society. This role further included communicating effectively with a range of other volunteers in the society and to deal with a variety of customers who join the society.
               </div>
             </div>
           </div>
