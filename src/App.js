@@ -105,7 +105,7 @@ class App extends Component {
           <div className='otherProjects-collection'>
             <div className='otherProjects-ibm'>
               <img alt='IBM Logo' className='ibm' src={require('./images/ibm.png')}></img>
-              <div className='otherProjects-content'><br /><br />
+              <div className='otherProjects-content'><br />
                 <p className='otherProjects-content-title'>Daeja ViewONE Virtual</p>
                 Working as a developer here I have been a part of an agile development cycle. Developing in a variety of languages from XML to Java. Whilst working in the Daeja team I have worked on many different projects, furthering my knowledge of automated testing with technologies (Vagrant, Selenium, REST tests). As well as working in a complex and large codebase that has been maintained for a long time.<br/>
                 <p className='otherProjects-content-title'>Early Professionals Hub</p>
@@ -114,11 +114,11 @@ class App extends Component {
             </div>
             <div className='otherProjects-uh'>
               <img alt='UH Logo' className='uh' src={require('./images/uh.png')}></img>
-              <div className='otherProjects-content'><br /><br />
+              <div className='otherProjects-content'><br />
                 <p className='otherProjects-content-title'>Computer Science (Software Engineering) (2016-2020)</p>
                 I have grown a lot throughout my time at university, achieving a First Class with Honours averaging an 84% across my modules. Notable module grades include Software Engineering Practice (94%), Mobile Computing (85%) and Software Engineering Project (84%). Furthermore, I have interacted with many extra-curricular activities such as working on the Esports Society and being a voting member on the Student Council.
                 <p className='otherProjects-content-title'>Projects and Experiences</p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ante arcu. Ut vel augue nec tortor tempus tempus sed vitae dolor.
+                At university, I was given the opportunity to work on a variety of different projects to expand my skillset. In Mobile Computing I learned all about developing on Apple products, learning Swift to make a small iOS game. In Software Engineering Practice and Object-Oriented Programming I furthered my skills and understanding of object-oriented programming in Java.
               </div>
             </div>
             <div className='otherProjects-hertsgg'>
@@ -139,7 +139,7 @@ class App extends Component {
           <div className='about-content'>
             <div className='about-title'> ABOUT ME </div>
             <div className='about-text'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ante arcu. Ut vel augue nec tortor tempus tempus sed vitae dolor. Suspendisse at tincidunt metus. Sed sed blandit felis. Integer eu urna vel dolor luctus tempor. Nulla in vestibulum nunc. Integer pellentesque auctor ante, vel dictum sem accumsan non. Pellentesque dapibus erat velit, sed fringilla mauris placerat vitae. In hac habitasse platea dictumst. Praesent sed nulla nec ante pharetra dignissim.
+            I am a motivated, determined and confident young developer who wants to improve and work on interesting projects. With my experiences working at IBM I have learned a lot about working in a team and enhancing my skills to work on large projects. My time at the Esports Society has helped build confidence and develop a project from start to finish and to oversee a project going from nothing to one of the largest university esports societies within the UK. I want to keep exploring avenues which help me to expand my skillset and knowledge of the industry.
             </div>
             <div className='urls'>
               <a target='_blank' rel='noopener noreferrer' href={'https://github.com/3eak'}><img alt='GitHub Logo' className='github' src={require('./images/github.png')}></img></a>
@@ -150,7 +150,6 @@ class App extends Component {
           </div>
         </div>
       </div>
-
     );
   }
 }
