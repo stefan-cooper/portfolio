@@ -197,13 +197,13 @@ $colour-5: #45A29E;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  color: white;
 }
 
 .otherProjects-collection {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+
   //margin-top: 1vh;
 }
 
@@ -211,18 +211,24 @@ $colour-5: #45A29E;
   width: 20vw;
   height: 10vw;
   align-self: center;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
 }
 
 .otherProjects-uh {
   width: 20vw;
   height: 10vw;
   align-self: center;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
 }
 
 .otherProjects-hertsgg {
   width: 20vw;
   height: 10vw;
   align-self: center;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
 }
 
 .ibm {
