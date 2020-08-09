@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eedae79a9fd9911b5c632a9cebd5c759",
+    "revision": "5c0ed0e313bc655f98a2290b213f7381",
     "url": "/index.html"
   },
   {
-    "revision": "d5ff85c9431b2cc05031",
-    "url": "/static/css/main.177f4951.chunk.css"
+    "revision": "d37ea6c8ee44f9a22133",
+    "url": "/static/css/main.67ef5b47.chunk.css"
   },
   {
     "revision": "d625e2013e4021911e34",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.7f78c3fe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d5ff85c9431b2cc05031",
-    "url": "/static/js/main.39ea4236.chunk.js"
+    "revision": "d37ea6c8ee44f9a22133",
+    "url": "/static/js/main.a2e06382.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -46,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a48e5acc8a103505d8b2277a22be0461",
     "url": "/static/media/built-titling-sb.a48e5acc.ttf"
+  },
+  {
+    "revision": "52a5c0f95c67cf547788f9bc3bbf4373",
+    "url": "/static/media/discordbot.52a5c0f9.png"
   },
   {
     "revision": "359f759161347d3f892cc4ab3b243331",
