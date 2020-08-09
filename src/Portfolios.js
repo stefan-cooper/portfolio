@@ -42,15 +42,17 @@ export const hertsgg = () => {
     )
   }
 
-export const test = () => {
+export const discordbot = () => {
     return (
       <div className='otherProjects-hertsgg'>
-        <img alt='hertsgg Logo' className='hertsgg' src={require('./images/hertsgg.png')}></img>
+        <img alt='hertsgg Logo' className='discordbot' src={require('./images/discordbot.png')}></img>
         <div className='otherProjects-content'>
-          <p className='otherProjects-content-title'>TEST</p>
-         TEST
-         <p className='otherProjects-content-title'>TEST</p>
-         TEST 
+          <p className='otherProjects-content-title'>Herts Esports Society Discord Bot</p>
+          This bot is written in Node.js implementing Discord API and is used for within the Herts Esports Society's Official Discord Server for a variety of purposes.
+          Implementing Twitch API and using MongoDB as a database service, I have written this bot to be able to track stats of the twitch streamers within the society.
+         <p className='otherProjects-content-title'>Additional Use Cases</p>
+          The bot also has a lot of other purposes for the admin side of the society, for things such as purging specific roles, shuffling 'houses', verifying members and more. There is a list of these commands in my GitHub repository.
+          This is a very adaptable that can be changed depending on the societies needs.
          </div>
       </div>
     )

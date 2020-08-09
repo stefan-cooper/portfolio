@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Zoom from 'react-reveal/Zoom';
 import './App.scss';
-import { ibm, uh, hertsgg, test, esportshub, paperclicker } from './Portfolios';
+import { ibm, uh, hertsgg, discordbot, esportshub, paperclicker } from './Portfolios';
 
 const p1images = {image1: require('./images/feed1.png'),
                   image2: require('./images/feed2.png'),
@@ -23,7 +23,7 @@ const p2images = {image1: require('./images/earlygame1.png'),
 const extraportfolios = {portfolio1: ibm(),
   portfolio2: uh(),
   portfolio3: hertsgg(),
-  portfolio4: test()}
+  portfolio4: discordbot()}
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +34,8 @@ class App extends Component {
       p2imagesCount: 1,
       p3Count: 1,
       fadein1: true,
-      fadein2: true
+      fadein2: true,
+      slidein1: true
     }
   }
 
@@ -69,14 +70,14 @@ class App extends Component {
   changePortfolio(direction) {
     if (direction === 'right') {
       if (this.state.p3Count - 1 === 0)
-        this.setState({p3Count: 4})
+        this.setState({p3Count: 4, slidein1: true})
       else
-        this.setState({p3Count: this.state.p3Count - 1})
+        this.setState({p3Count: this.state.p3Count - 1, slidein1: true})
     } else if (direction === 'left') {
       if (this.state.p3Count + 1 > Object.keys(extraportfolios).length)
-        this.setState({p3Count: 1})
+        this.setState({p3Count: 1, slidein1: true})
       else
-        this.setState({p3Count: this.state.p3Count + 1})
+        this.setState({p3Count: this.state.p3Count + 1, slidein1: true})
       }
   }
 
@@ -87,9 +88,9 @@ class App extends Component {
           <p className='title'> S T E F A N <br/> C O O P E R </p>
         </div>
         <div className='esportshub'>
-        <Zoom left cascade>
+          <Zoom left cascade>
             {esportshub()}
-            </Zoom>
+          </Zoom>
           <Zoom left cascade>
             <div onAnimationEnd={() => this.setState({fadein1: false})} className={this.state.fadein1 ? 'portfolio-1-images-div fade-in' : 'portfolio-1-images-div' }>
               <span onClick={() => this.changeImagesEsportsHub('up')} className='center chevron up'></span>
@@ -114,8 +115,8 @@ class App extends Component {
         </div>
         <div className='otherProjects'>
           <div className='otherProjects-title'> OTHER PROJECTS & EXPERIENCE </div>
-          <div className='otherProjects-collection'>
-          <span onClick={() => this.changePortfolio('left')} className='center chevron left'></span>
+          <div onAnimationEnd={() => this.setState({slidein1: false})} className={this.state.slidein1 ? 'otherProjects-collection fade-in' : 'otherProjects-collection'}>
+            <span onClick={() => this.changePortfolio('left')} className='center chevron left'></span>
             {extraportfolios['portfolio'+this.state.p3Count]}
             {this.state.p3Count + 1 > Object.keys(extraportfolios).length ? extraportfolios['portfolio1'] : extraportfolios['portfolio'+(this.state.p3Count+1)]}
             {this.state.p3Count + 2 > Object.keys(extraportfolios).length ? extraportfolios['portfolio'+(this.state.p3Count + 2 - Object.keys(extraportfolios).length)] : extraportfolios['portfolio'+(this.state.p3Count+2)]}
