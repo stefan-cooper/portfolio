@@ -1,10 +1,10 @@
 // Colours
 
-$colour-1: #0B0C10;
-$colour-2: #1F2833;
-$colour-3: #C5C6C7;
-$colour-4: #66FCF1;
-$colour-5: #45A29E;
+$colour-1: #0b0c10;
+$colour-2: #1f2833;
+$colour-3: #c5c6c7;
+$colour-4: #66fcf1;
+$colour-5: #45a29e;
 
 .everything {
   text-align: center;
@@ -41,34 +41,34 @@ $colour-5: #45A29E;
 }
 
 @font-face {
-  font-family: 'BuiltSB';
-  src: local('BuiltSB'), url('./fonts/built-titling-sb.ttf') format('truetype');
+  font-family: "BuiltSB";
+  src: local("BuiltSB"), url("./fonts/built-titling-sb.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'BuiltRG';
-  src: local('BuiltRG'), url('./fonts/built-titling-rg.ttf') format('truetype');
+  font-family: "BuiltRG";
+  src: local("BuiltRG"), url("./fonts/built-titling-rg.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'BuiltLT';
-  src: local('BuiltLT'), url('./fonts/built-titling-lt.ttf') format('truetype');
+  font-family: "BuiltLT";
+  src: local("BuiltLT"), url("./fonts/built-titling-lt.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'ArcaMajora3-Bold';
-  src: local('ArcaMajora3-Bold'), url('./fonts/ArcaMajora3-Bold.ttf') format('truetype');
+  font-family: "ArcaMajora3-Bold";
+  src: local("ArcaMajora3-Bold"), url("./fonts/ArcaMajora3-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'ArcaMajora3-Heavy';
-  src: local('ArcaMajora3-Heavy'), url('./fonts/ArcaMajora3-Heavy.ttf') format('truetype');
+  font-family: "ArcaMajora3-Heavy";
+  src: local("ArcaMajora3-Heavy"), url("./fonts/ArcaMajora3-Heavy.ttf") format("truetype");
 }
 
 .title {
   font-family: BuiltSB;
   color: $colour-4;
-  font-size: 20vh;
+  font-size: 12vw;
 }
 
 .esportshub {
@@ -129,12 +129,12 @@ $colour-5: #45A29E;
   width: 90%;
   height: auto;
   margin: 0.5rem;
-  -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,1);
-  -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,1);
-  box-shadow: 0px 5px 15px 0px rgba(0,0,0,1);
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 1);
 }
 
-.paperclicker{
+.paperclicker {
   text-align: center;
   height: 100vh;
   display: flex;
@@ -357,7 +357,7 @@ $colour-5: #45A29E;
 .chevron::before {
   border-style: solid;
   border-width: 0.25em 0.25em 0 0;
-  content: '';
+  content: "";
   display: inline-block;
   height: 0.45em;
   transform: rotate(-45deg);
@@ -394,28 +394,48 @@ $colour-5: #45A29E;
   -moz-animation: fadeIn ease 0.45s;
   -o-animation: fadeIn ease 0.45s;
   -ms-animation: fadeIn ease 0.45s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  100% {
+    opacity: 1;
   }
-  
-  @-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  100% {
+    opacity: 1;
   }
-  
-  @-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  @-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  100% {
+    opacity: 1;
   }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
