@@ -1,0 +1,50 @@
+@import "./app.scss";
+
+.experiences {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-family: BuiltRG;
+    color: $colour-4;
+    font-size: 6vw;
+  }
+
+  &__collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.experience {
+  width: 20vw;
+  height: 10vw;
+  align-self: center;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+
+  &__image {
+    max-width: 80%;
+    height: auto;
+    max-height: 90%;
+    margin-top: 2rem;
+  }
+
+  &__text {
+    color: $colour-3;
+    font-size: 1vw;
+    font-family: ArcaMajora3-Bold;
+    width: 20vw;
+    white-space: pre-wrap;
+  }
+
+  &__title {
+    color: $colour-3;
+    font-size: 1vw;
+    font-family: ArcaMajora3-Heavy;
+    white-space: pre-wrap;
+  }
+}

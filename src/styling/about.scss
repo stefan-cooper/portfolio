@@ -1,0 +1,66 @@
+@import "./app.scss";
+
+.about {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: flex-start;
+
+  &__title {
+    font-family: BuiltRG;
+    color: $colour-4;
+    font-size: 6vw;
+    align-self: center;
+    margin-top: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+  }
+
+  &__text {
+    font-family: ArcaMajora3-Bold;
+    color: $colour-3;
+    font-size: 1.5vw;
+    align-self: center;
+    margin-top: 2rem;
+    width: 80%;
+  }
+
+  &__urls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+
+    &-icon {
+      color: white;
+      min-width: 3rem;
+      height: auto;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: center;
+    align-content: center;
+    margin: 10vw;
+
+    &-picture {
+      border-radius: 50%;
+      width: auto;
+      height: 35vw;
+      align-self: center;
+    }
+  }
+}

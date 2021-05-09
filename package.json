@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "classnames": "^2.3.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -20,7 +25,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "prettier": "prettier . --check",
-    "prettier:write": "prettier . --write"
+    "prettier:write": "prettier . --write",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "precommit": "lint-staged"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,7 +47,25 @@
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "compress-images": "^1.9.9",
+    "pngquant-bin": "^6.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js, json, css, scss}": [
+      "npm run prettier:write"
+    ],
+    "*.png": [
+      "node compress_images.js"
+    ],
+    "*.js": "npm run lint:fix"
   },
   "homepage": "https://stefancooper.com/"
 }
