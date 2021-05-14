@@ -36,7 +36,7 @@ const Experience = () => {
 
   return (
     <div className="experiences">
-      <div className="experiences__title"> OTHER PROJECTS & EXPERIENCE </div>
+      <div className="experiences__title"> OTHER EXPERIENCE </div>
       <div
         onAnimationEnd={() => updateSlideIn(false)}
         className={classNames("experiences__collection", { "fade-in": slideIn })}
@@ -47,7 +47,8 @@ const Experience = () => {
           }
           className="center chevron left"
         ></span>
-        {renderedPortfolios(extraPortfolios)}
+        <div className="experiences__portfolios">{renderedPortfolios(extraPortfolios)}</div>
+
         <span
           onClick={() =>
             changeImages(updatePortfolioSelection, portfolioSelection, extraPortfolios, "right")

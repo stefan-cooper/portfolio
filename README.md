@@ -8,7 +8,7 @@ I am aware that some of the links and github urls will be private/down. Please c
 
 You can run the portfolio locally using the following command.
 
-```npm start```
+`npm start`
 
 ### Links
 
@@ -19,4 +19,3 @@ You can run the portfolio locally using the following command.
 [Github](https://github.com/stefan-cooper)
 
 [Twitter](https://twitter.com/3eakstefan)
-

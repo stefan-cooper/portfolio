@@ -46,11 +46,13 @@ const bigPortfolio = ({ title, subtext, skills, links, rtl = false }) => {
 export const smallPortfolio = ({ title, subtitle, description, subdescription, image }) => {
   return (
     <div className="experience">
-      <img
-        alt="Experience Logo"
-        className="experience__image"
-        src={require(`../images/${image}`)}
-      />
+      <div className="experience__images">
+        <img
+          alt="Experience Logo"
+          className="experience__image"
+          src={require(`../images/${image}`)}
+        />
+      </div>
       <div className="experience__text">
         <br />
         <p className="experience__title">{title}</p>
