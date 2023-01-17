@@ -1,13 +1,14 @@
 import React from "react";
-import Zoom from "react-reveal/Zoom";
 import "./styling/app.scss";
 import { esportshub, paperclicker } from "./components/Portfolios";
 import { esportsHubImages, paperclickerImages } from "./components/Assets";
 import ImageSlideshow from "./components/ImageSlideshow";
 import Experience from "./components/Experience";
 import About from "./components/About";
+import { addScrollReveals } from "./scrollReveal";
 
 const App = () => {
+  addScrollReveals();
   return (
     <div className="everything">
       <div className="stefancooper">
@@ -16,24 +17,16 @@ const App = () => {
         </p>
       </div>
       <div className="esportshub">
-        <Zoom left cascade>
-          {esportshub()}
-        </Zoom>
-        <Zoom left cascade>
-          <div className="portfolio-position">
-            <ImageSlideshow images={esportsHubImages} />
-          </div>
-        </Zoom>
+        {esportshub()}
+        <div className="portfolio-position esportshub-slideshow">
+          <ImageSlideshow images={esportsHubImages} />
+        </div>
       </div>
       <div className="paperclicker">
-        <Zoom right cascade>
-          {paperclicker()}
-        </Zoom>
-        <Zoom right cascade>
-          <div className="portfolio-position">
-            <ImageSlideshow images={paperclickerImages} />
-          </div>
-        </Zoom>
+        {paperclicker()}
+        <div className="portfolio-position paperclicker-slideshow">
+          <ImageSlideshow images={paperclickerImages} />
+        </div>
       </div>
       <Experience />
       <About />

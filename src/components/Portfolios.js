@@ -22,9 +22,9 @@ const buildSkills = (skills) => {
 
 const buildLinks = (links) => {
   let linkBuilder = [];
-  links.forEach((link) => {
+  links.forEach((link, index) => {
     linkBuilder.push(
-      <a target="_blank" rel="noopener noreferrer" href={link.url}>
+      <a key={index} target="_blank" rel="noopener noreferrer" href={link.url}>
         <FontAwesomeIcon className="portfolio__links__image" icon={link.icon} />
       </a>
     );
@@ -32,9 +32,9 @@ const buildLinks = (links) => {
   return linkBuilder;
 };
 
-const bigPortfolio = ({ title, subtext, skills, links, rtl = false }) => {
+const bigPortfolio = ({ title, subtext, skills, links, rtl = false, additionalClassnames }) => {
   return (
-    <div className={classNames("portfolio", { rtl: rtl })}>
+    <div className={classNames(`portfolio ${additionalClassnames}`, { rtl: rtl })}>
       <div className="portfolio__title">{title}</div>
       <div className="portfolio__subtext">{subtext}</div>
       {skills && <div className="portfolio__tert">{buildSkills(skills)}</div>}
@@ -45,7 +45,7 @@ const bigPortfolio = ({ title, subtext, skills, links, rtl = false }) => {
 
 export const smallPortfolio = ({ title, subtitle, description, subdescription, image }) => {
   return (
-    <div className="experience">
+    <div key={title} className="experience">
       <div className="experience__images">
         <img
           alt="Experience Logo"
@@ -69,11 +69,12 @@ export const esportshub = () => {
   return bigPortfolio({
     title: "ESPORTS HUB",
     subtext: "A website hub for everything university esports",
-    skills: ["reactjs", "expressjs", "ibm cloudant"],
+    skills: ["reactjs", "expressjs", "cloud databases"],
     links: [
-      { url: "https://github.com/stefan-cooper/esportshub-server", icon: faGithub },
-      { url: "https://hub.stefancooper.com", icon: faLink },
+      { url: "https://github.com/stefan-cooper/esportshub", icon: faGithub },
+      // { url: "https://hub.stefancooper.com", icon: faLink }, // currently not being hosted
     ],
+    additionalClassnames: "esportshub-title",
   });
 };
 
@@ -84,8 +85,9 @@ export const paperclicker = () => {
     skills: ["reactjs", "redux"],
     links: [
       { url: "https://github.com/stefan-cooper/paper-clicker", icon: faGithub },
-      { url: "http://clicker.stefancooper.com", icon: faLink },
+      { url: "http://paperclicker.com", icon: faLink },
     ],
     rtl: true,
+    additionalClassnames: "paperclicker-title",
   });
 };
