@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styling/app.scss";
 import { esportshub, paperclicker } from "./components/Portfolios";
 import { esportsHubImages, paperclickerImages } from "./components/Assets";
@@ -8,7 +8,10 @@ import About from "./components/About";
 import { addScrollReveals } from "./scrollReveal";
 
 const App = () => {
-  addScrollReveals();
+  useEffect(() => {
+    addScrollReveals();
+  }, []);
+
   return (
     <div className="everything">
       <div className="stefancooper">

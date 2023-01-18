@@ -4,7 +4,6 @@ import ScrollReveal from "scrollreveal";
 export const addScrollReveals = () => {
   ScrollReveal().reveal(".stefancooper", {
     origin: "bottom",
-    distance: "50%",
     duration: 1500,
     opacity: 0,
   });
