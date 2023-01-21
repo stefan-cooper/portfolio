@@ -1,7 +1,6 @@
 // import { ibm, uh, hertsgg, discordbot } from "./Portfolios";
 
-import experiences from "../experience.json";
-import { smallPortfolio } from "./Portfolios";
+import experiencesJson from "../experience.json";
 
 export const esportsHubImages = {
   image1: require("../images/feed1.png"),
@@ -23,16 +22,4 @@ export const paperclickerImages = {
   image3: require("../images/earlygame3.png"),
 };
 
-export const extraExperience = () => {
-  let extra = {};
-  Object.values(experiences).forEach((experience, index) => {
-    extra[`portfolio${index}`] = smallPortfolio({
-      title: experience.title,
-      subtitle: experience.subtitle,
-      description: experience.description,
-      subdescription: experience.subdescription,
-      image: experience.image,
-    });
-  });
-  return extra;
-};
+export const experiences = () => Object.values(experiencesJson);

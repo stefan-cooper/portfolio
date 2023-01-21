@@ -1,5 +1,4 @@
 @import "./fonts.scss";
-@import "./animations.scss";
 
 // Colours
 
@@ -107,10 +106,10 @@ $colour-5: #45a29e;
   border-width: 0.25em 0.25em 0 0;
   content: "";
   display: inline-block;
-  height: 0.45em;
+  height: 1em;
   transform: rotate(-45deg);
   vertical-align: top;
-  width: 0.45em;
+  width: 1em;
   cursor: pointer;
   color: white;
   margin: 0.5rem;

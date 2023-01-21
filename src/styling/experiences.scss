@@ -5,6 +5,8 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   @media (max-width: 1000px) {
     width: 90%;
@@ -12,12 +14,13 @@
     align-self: center;
     height: fit-content;
     min-height: 100vh;
+    margin-top: 5rem;
   }
 
   &__title {
     font-family: BuiltRG;
     color: $colour-4;
-    font-size: 6vw;
+    font-size: 4vw;
 
     @media (max-width: 1000px) {
       font-size: 3.5rem;
@@ -48,6 +51,46 @@
   }
 }
 
+.slider {
+  width: 80%;
+  height: 20rem;
+  margin: 5rem;
+
+  @media (max-width: 1000px) {
+    margin: unset;
+    width: 80%;
+    height: unset;
+  }
+}
+
+.experiences-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.slick-center {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.slick-slide:not(.slick-current) {
+  opacity: 0.4;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.experience-text {
+  width: 60% !important;
+
+  @media (max-width: 1000px) {
+    width: 90% !important;
+  }
+}
+
 .experience {
   width: 20vw;
   height: 10rem;
@@ -62,17 +105,21 @@
   }
 
   &__images {
-    margin-top: 2rem;
     height: 10rem;
+    margin: 3rem;
     align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: -1;
 
     @media (max-width: 1000px) {
       margin-top: unset;
       height: 8rem;
+      margin: unset;
+      padding-right: 3rem;
+      width: 100%;
     }
   }
 
@@ -88,10 +135,12 @@
     font-family: RobotoRG;
     width: 20vw;
     white-space: pre-wrap;
+    margin: 1rem;
 
     @media (max-width: 1000px) {
       font-size: 1rem;
       width: 20rem;
+      padding-right: 3rem;
     }
   }
 
@@ -104,5 +153,20 @@
     @media (max-width: 1000px) {
       font-size: 1rem;
     }
+  }
+
+  &__front {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+
+    > * {
+      margin: 0.5rem;
+    }
+  }
+
+  &__tag {
+    margin: 0.25rem;
   }
 }

@@ -1,9 +1,10 @@
 import React from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../styling/portfolios.scss";
+import { Heading, Tag } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 const classNames = require("classnames");
 
@@ -43,9 +44,9 @@ const bigPortfolio = ({ title, subtext, skills, links, rtl = false, additionalCl
   );
 };
 
-export const smallPortfolio = ({ title, subtitle, description, subdescription, image }) => {
+export const SmallPortfolio = ({ image, tags, role, index }) => {
   return (
-    <div key={title} className="experience">
+    <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} key={index}>
       <div className="experience__images">
         <img
           alt="Experience Logo"
@@ -54,14 +55,16 @@ export const smallPortfolio = ({ title, subtitle, description, subdescription, i
         />
       </div>
       <div className="experience__text">
-        <br />
-        <p className="experience__title">{title}</p>
-        {description}
-        <br />
-        <p className="experience__title">{subtitle}</p>
-        {subdescription}
+        <div className={"experience__front"}>
+          <Heading size="lg">{role}</Heading>
+          <div>
+            {tags.map((tag) => {
+              return <Tag key={tag} size={"sm"} className="experience__tag">{`#${tag}`}</Tag>;
+            })}
+          </div>
+        </div>
       </div>
-    </div>
+    </motion.button>
   );
 };
 

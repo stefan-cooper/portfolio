@@ -97,9 +97,8 @@
     }
 
     &-picture {
-      border-radius: 50%;
+      border-radius: 5%;
       width: auto;
-      height: 35vw;
       align-self: center;
 
       @media (max-width: 1000px) {

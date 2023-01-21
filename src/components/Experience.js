@@ -1,60 +1,95 @@
-import React, { useEffect, useState } from "react";
-import { changeImages } from "./utils";
-import { extraExperience } from "./Assets";
+import React, { useState } from "react";
+import { experiences } from "./Assets";
+import { SmallPortfolio } from "./Portfolios";
 import "../styling/experiences.scss";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Heading } from "@chakra-ui/react";
 
-const classNames = require("classnames");
+export const experiencesAsPortfolios = () => {
+  return experiences().map((experience, i) => {
+    return (
+      <div key={i}>
+        {SmallPortfolio({
+          index: i,
+          image: experience.image,
+          tags: experience.tags,
+          role: experience.role,
+        })}
+      </div>
+    );
+  });
+};
 
 const Experience = () => {
-  const [portfolioSelection, updatePortfolioSelection] = useState(1);
-  const [slideIn, updateSlideIn] = useState(true);
+  const [topSlider, updateTopSlider] = useState();
+  const [botSlider, updateBotSlider] = useState();
 
-  const extraPortfolios = extraExperience();
+  const descriptions = experiences().map((pf) => {
+    return (
+      <div key={pf.title} className={"experience-text"}>
+        <Heading size={"md"}>{pf.title}</Heading>
+        <p>{pf.description}</p>
+        <Heading size={"md"}>{pf.subtitle}</Heading>
+        <p>{pf.subdescription}</p>
+      </div>
+    );
+  });
 
-  useEffect(() => {
-    updateSlideIn(true);
-  }, [portfolioSelection]);
-
-  const addPortfolio = (renderedList, portfolio) => {
-    if (renderedList.length < 3) {
-      renderedList.push(portfolio);
-    }
-    return renderedList;
-  };
-
-  const renderedPortfolios = (portfolios) => {
-    let jsx = [];
-    const slicedPortfolios = Object.values(portfolios).slice(portfolioSelection - 1);
-    slicedPortfolios.forEach((p) => {
-      jsx = addPortfolio(jsx, p);
-    });
-    Object.values(portfolios).forEach((p) => {
-      jsx = addPortfolio(jsx, p);
-    });
-    return jsx;
-  };
+  // TODO - remove this when other experiences text are ready
+  const limitToFour = (arr) => arr.filter((_, i) => i < 4);
 
   return (
     <div className="experiences">
-      <div className="experiences__title"> OTHER EXPERIENCE </div>
+      <div className="experiences-carousel">
+        <Slider
+          ref={(slider) => updateTopSlider(slider)}
+          arrows={false}
+          pauseOnHover
+          pauseOnFocus
+          focusOnSelect
+          centerMode
+          className="slider"
+          infinite
+          autoplay
+          asNavFor={botSlider}
+          autoplaySpeed={3000}
+          speed={500}
+          slidesToShow={3}
+          responsive={[
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 1,
+                centerMode: false,
+                slidesToScroll: 1,
+              },
+            },
+          ]}
+        >
+          {limitToFour(experiencesAsPortfolios())}
+        </Slider>
+      </div>
       <div
-        onAnimationEnd={() => updateSlideIn(false)}
-        className={classNames("experiences__collection", { "fade-in": slideIn })}
+        className="experiences-carousel"
+        onMouseOver={() => topSlider.slickPause()}
+        onMouseOut={() => topSlider.slickPlay()}
       >
-        <span
-          onClick={() =>
-            changeImages(updatePortfolioSelection, portfolioSelection, extraPortfolios, "left")
-          }
-          className="center chevron left"
-        ></span>
-        <div className="experiences__portfolios">{renderedPortfolios(extraPortfolios)}</div>
-
-        <span
-          onClick={() =>
-            changeImages(updatePortfolioSelection, portfolioSelection, extraPortfolios, "right")
-          }
-          className="center chevron right"
-        ></span>
+        <Slider
+          ref={(slider) => updateBotSlider(slider)}
+          arrows={false}
+          pauseOnHover
+          pauseOnFocus
+          asNavFor={topSlider}
+          className="slider"
+          infinite
+          fade
+          speed={500}
+          slidesToShow={1}
+        >
+          {limitToFour(descriptions)}
+        </Slider>
       </div>
     </div>
   );
