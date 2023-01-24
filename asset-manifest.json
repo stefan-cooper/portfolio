@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.5aba18a3.css",
-    "main.js": "/static/js/main.52eba1a4.js",
+    "main.css": "/static/css/main.5285444c.css",
+    "main.js": "/static/js/main.a624958a.js",
     "static/media/feed1.png": "/static/media/feed1.96a269736999f960459b.png",
     "static/media/about.png": "/static/media/about.06935667f153303d895b.png",
     "static/media/feed2.png": "/static/media/feed2.c7ab31a1921fc98944d9.png",
+    "static/media/nesa.png": "/static/media/nesa.4bf54ea7c4e0c66e8a59.png",
     "static/media/profile1.png": "/static/media/profile1.a6b25fc21508298a9055.png",
     "static/media/schedule2.png": "/static/media/schedule2.4202f6d8349cd1c5f5a6.png",
     "static/media/schedule1.png": "/static/media/schedule1.76df2bfb392ce7dae37c.png",
@@ -25,16 +26,23 @@
     "static/media/built-titling-sb.ttf": "/static/media/built-titling-sb.b4c26889c674d85b1d58.ttf",
     "static/media/built-titling-lt.ttf": "/static/media/built-titling-lt.4e84037b4c1a789e518e.ttf",
     "static/media/web.png": "/static/media/web.ea30b207c35c254764de.png",
-    "static/media/uh.png": "/static/media/uh.a9e7638139c3e5552526.png",
+    "static/media/nesa.com.png": "/static/media/nesa.com.3dec7087dfde34d3093c.png",
     "static/media/ArcaMajora3-Heavy.ttf": "/static/media/ArcaMajora3-Heavy.ca5e665a4095524776d1.ttf",
     "static/media/ArcaMajora3-Bold.ttf": "/static/media/ArcaMajora3-Bold.d8ff2923edb45a9bfeb4.ttf",
+    "static/media/uh.png": "/static/media/uh.67eb7db22ffd9613d517.png",
+    "static/media/eh.png": "/static/media/eh.2f66f4f70427670515d2.png",
+    "static/media/kafka.png": "/static/media/kafka.2d089c1a107a628ddfcd.png",
     "static/media/ibm.png": "/static/media/ibm.38da24d690c5f15980fd.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.5aba18a3.css.map": "/static/css/main.5aba18a3.css.map",
-    "main.52eba1a4.js.map": "/static/js/main.52eba1a4.js.map"
+    "main.5285444c.css.map": "/static/css/main.5285444c.css.map",
+    "main.a624958a.js.map": "/static/js/main.a624958a.js.map"
   },
   "entrypoints": [
-    "static/css/main.5aba18a3.css",
-    "static/js/main.52eba1a4.js"
+    "static/css/main.5285444c.css",
+    "static/js/main.a624958a.js"
   ]
 }
