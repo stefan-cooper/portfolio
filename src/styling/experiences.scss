@@ -2,7 +2,7 @@
 
 .experiences {
   text-align: center;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
@@ -83,12 +83,59 @@
   transform: scale(0.9);
 }
 
-.experience-text {
+.experience-data {
+  display: flex !important;
+  flex-direction: row;
+}
+
+.experience-extra {
   width: 60% !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // text-align: center;
 
   @media (max-width: 1000px) {
     width: 90% !important;
   }
+
+  @media (max-width: 700px) {
+    width: 0 !important;
+    display: none;
+    > * {
+      display: none;
+    }
+  }
+}
+
+.experience-text {
+  width: 60% !important;
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+
+  @media (max-width: 1000px) {
+    width: 90% !important;
+  }
+
+  @media (max-width: 700px) {
+    width: 100% !important;
+  }
+}
+
+.experience-image {
+  margin-right: 1rem;
+  width: 4rem !important;
+  height: 4rem;
+  color: white;
+
+  &:hover {
+    opacity: 0.75;
+  }
+  
 }
 
 .experience {

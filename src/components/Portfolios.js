@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "../styling/portfolios.scss";
-import { Heading, Tag } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 const classNames = require("classnames");
@@ -57,11 +57,6 @@ export const SmallPortfolio = ({ image, tags, role, index }) => {
       <div className="experience__text">
         <div className={"experience__front"}>
           <Heading size="lg">{role}</Heading>
-          <div>
-            {tags.map((tag) => {
-              return <Tag key={tag} size={"sm"} className="experience__tag">{`#${tag}`}</Tag>;
-            })}
-          </div>
         </div>
       </div>
     </motion.button>

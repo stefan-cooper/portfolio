@@ -7,7 +7,12 @@
     "subdescription": "At university, I was given the opportunity to work on a variety of different projects to expand my skillset. In Mobile Computing I learned all about developing on Apple products, learning Swift to make a small iOS game. In Software Engineering Practice and Object-Oriented Programming I furthered my skills and understanding of object-oriented programming in Java.",
     "image": "uh.png",
     "role": "Degree",
-    "tags": []
+    "tags": ["Best practices", "Education"],
+    "details": {
+      "head": "Computer Science (Software Engineering)",
+      "role": "First Class (84%)",
+      "time": "2016-2020"
+    }
   },
   "hertsgg": {
     "key": "hertsgg",
@@ -17,17 +22,26 @@
     "subdescription": "I am responsible for the outgoing transactions and understand the financing of the society. This role further included communicating effectively with a range of other volunteers in the society and to deal with a variety of customers who join the society.",
     "image": "hertsgg.png",
     "role": "Volunteering",
-    "tags": ["Leadership"]
+    "tags": ["Leadership", "Esports"],
+    "details": {
+      "time": "2017-2020",
+      "role": "Chair",
+      "link": "https://github.com/hertsgg/HousesBot"
+    }
   },
   "ibmIntern": {
     "key": "ibmIntern",
     "title": "Daeja ViewONE Virtual",
     "description": "Working as a developer here I have been a part of an agile development cycle. Developing in a variety of languages from XML to Java. Whilst working in the Daeja team I have worked on many different projects, furthering my knowledge of automated testing with technologies (Vagrant, Selenium, REST tests). As well as working in a complex and large codebase that has been maintained for a long time.",
     "subtitle": "Early Professionals Hub",
-    "subdescription": "Whilst at IBM I worked on a giveback team of interns on the EPH (Early Professionals Hub).A web-based project written in React using a variety of web based libraries such as Redux. The site interacts with a cloud based database (IBM Cloudant) to maintain information on its users and various data tracking.",
+    "subdescription": "Whilst at IBM I worked on a giveback team of interns on the EPH (Early Professionals Hub). A web-based project written in React using a variety of web based libraries such as Redux. The site interacts with a cloud based database (IBM Cloudant) to maintain information on its users and various data tracking.",
     "image": "ibm.png",
     "role": "Intern",
-    "tags": ["Java", "Selenium"]
+    "tags": ["Java", "Selenium", "Redux", "React", "Cloud Databases"],
+    "details": {
+      "head": "Year in the industry",
+      "time": "2017-2018"
+    }
   },
   "housesbot": {
     "key": "housesbot",
@@ -37,7 +51,12 @@
     "subdescription": "The bot also has a lot of other purposes for the admin side of the society, for things such as purging specific roles, shuffling 'houses', verifying members and more. There is a list of these commands in my GitHub repository. This is a very adaptable that can be changed depending on the societies needs.",
     "image": "discordbot.png",
     "role": "Project",
-    "tags": ["Node.js", "Discord", "Twitch API", "MongoDB"]
+    "tags": ["Node.js", "Discord", "Twitch API", "MongoDB"],
+    "details": {
+      "time": "2018-2019",
+      "github": "https://github.com/hertsgg/HousesBot",
+      "link": "http://herts.gg"
+    }
   },
   "ibm": {
     "key": "ibm",
@@ -47,7 +66,8 @@
     "subdescription": "lorem ipsum",
     "image": "ibm.png",
     "role": "Developer",
-    "tags": ["React", "Typescript"]
+    "tags": ["React", "Typescript"],
+    "details": {}
   },
   "kafkaMinecraft": {
     "key": "kafkaMinecraft",
@@ -57,7 +77,9 @@
     "subdescription": "lorem ipsum",
     "image": "kafka.png",
     "role": "Project",
-    "tags": []
+    "tags": [],
+    "details": {
+    }
   },
   "esportsHub": {
     "key": "esportsHub",
@@ -67,7 +89,8 @@
     "subdescription": "lorem ipsum",
     "image": "eh.png",
     "role": "Project",
-    "tags": ["React", "Express.js", "Discord", "Twitter"]
+    "tags": ["React", "Express.js", "Discord", "Twitter"],
+    "details": {}
   },
   "nesa": {
     "key": "nesa",
@@ -77,7 +100,8 @@
     "subdescription": "lorem ipsum",
     "image": "nesa.png",
     "role": "Director",
-    "tags": ["Leadership", "Esports"]
+    "tags": ["Leadership", "Esports"],
+    "details": {}
   },
   "nesaWebsite": {
     "key": "nesaWebsite",
@@ -87,7 +111,8 @@
     "subdescription": "lorem ipsum",
     "image": "nesa.com.png",
     "role": "Project",
-    "tags": ["React", "Node.js", "Discord", "MongoDB"]
+    "tags": ["React", "Node.js", "Discord", "MongoDB"],
+    "details": {}
   },
   "koala": {
     "key": "koala",
@@ -97,6 +122,7 @@
     "subdescription": "lorem ipsum",
     "image": "eh.png",
     "role": "Volunteering",
-    "tags": ["React", "Node.js", "Discord", "Python"]
+    "tags": ["React", "Node.js", "Discord", "Python"],
+    "details": {}
   }
 }

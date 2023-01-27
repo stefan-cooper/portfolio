@@ -13,18 +13,31 @@ $colour-5: #45a29e;
 .everything {
   text-align: center;
   background-image: repeating-linear-gradient($colour-2 100%, $colour-1 200%, $colour-2 300%);
-  height: 500vh;
+  height: 310vh;
   display: flex;
   flex-direction: column;
   color: white;
-  user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  // user-select: none;
+  // -moz-user-select: none;
+  // -khtml-user-select: none;
+  // -webkit-user-select: none;
+  // -ms-user-select: none;
 
   @media (max-width: 1000px) {
     height: fit-content;
+  }
+}
+
+.reconstruction-alert {
+  position: fixed;
+  margin: 1rem;
+  width: 50%;
+  color: $colour-2;
+  z-index: 1000;
+
+  @media (max-width: 1000px) {
+    width: calc(100% - 2rem);
+    margin: 1rem;
   }
 }
 

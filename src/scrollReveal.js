@@ -13,7 +13,7 @@ export const addScrollReveals = () => {
     duration: 1500,
     delay: 300,
     opacity: 0,
-    reset: true,
+    // reset: true,
   });
   ScrollReveal().reveal(".esportshub-slideshow", {
     origin: "left",
@@ -21,7 +21,7 @@ export const addScrollReveals = () => {
     duration: 1500,
     delay: 300,
     opacity: 0,
-    reset: true,
+    // reset: true,
   });
   ScrollReveal().reveal(".paperclicker-title", {
     origin: "left",
@@ -29,7 +29,7 @@ export const addScrollReveals = () => {
     duration: 1500,
     delay: 300,
     opacity: 0,
-    reset: true,
+    // reset: true,
   });
   ScrollReveal().reveal(".paperclicker-slideshow", {
     origin: "right",
@@ -37,7 +37,7 @@ export const addScrollReveals = () => {
     duration: 1500,
     delay: 300,
     opacity: 0,
-    reset: true,
+    // reset: true,
   });
   ScrollReveal().reveal(".experiences", {
     origin: "bottom",
@@ -45,6 +45,6 @@ export const addScrollReveals = () => {
     duration: 1500,
     delay: 300,
     opacity: 0,
-    reset: true,
+    // reset: true,
   });
 };

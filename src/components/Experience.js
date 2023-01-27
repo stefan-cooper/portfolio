@@ -5,7 +5,10 @@ import "../styling/experiences.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Heading } from "@chakra-ui/react";
+import { Heading, Link, Tag } from "@chakra-ui/react";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 export const experiencesAsPortfolios = () => {
   return experiences().map((experience, i) => {
@@ -27,12 +30,46 @@ const Experience = () => {
   const [botSlider, updateBotSlider] = useState();
 
   const descriptions = experiences().map((pf) => {
+    const { time, github, link, role, head } = pf && pf.details;
+
     return (
-      <div key={pf.title} className={"experience-text"}>
-        <Heading size={"md"}>{pf.title}</Heading>
-        <p>{pf.description}</p>
-        <Heading size={"md"}>{pf.subtitle}</Heading>
-        <p>{pf.subdescription}</p>
+      <div className="experience-data">
+        <div key={pf.title} className={"experience-text"}>
+          <Heading size={"md"}>{pf.title}</Heading>
+          <p>{pf.description}</p>
+          <br />
+          <Heading size={"md"}>{pf.subtitle}</Heading>
+          <p>{pf.subdescription}</p>
+          <br />
+          <div>
+            {pf.tags.map((tag) => {
+              return <Tag key={tag} size={"lg"} className="experience__tag">{`#${tag}`}</Tag>;
+            })}
+          </div>
+        </div>
+        <div className={"experience-extra"}>
+          {head ? (
+            <>
+              <Heading>{head}</Heading>
+              <br />
+            </>
+          ) : null}
+          {time ? <Heading>{time}</Heading> : null}
+          {role ? <Heading>{role}</Heading> : null}
+          <br />
+          <div>
+            {link ? (
+              <a key={link} target="_blank" rel="noopener noreferrer" href={link}>
+                <FontAwesomeIcon className="experience-image" icon={faLink} />
+              </a>
+            ) : null}
+            {github ? (
+              <a key={github} target="_blank" rel="noopener noreferrer" href={github}>
+                <FontAwesomeIcon className="experience-image" icon={faGithub} />
+              </a>
+            ) : null}
+          </div>
+        </div>
       </div>
     );
   });
@@ -51,10 +88,10 @@ const Experience = () => {
           focusOnSelect
           centerMode
           className="slider"
-          infinite
-          autoplay
+          // infinite
+          // autoplay
           asNavFor={botSlider}
-          autoplaySpeed={3000}
+          // autoplaySpeed={3000}
           speed={500}
           slidesToShow={3}
           responsive={[
@@ -73,8 +110,8 @@ const Experience = () => {
       </div>
       <div
         className="experiences-carousel"
-        onMouseOver={() => topSlider.slickPause()}
-        onMouseOut={() => topSlider.slickPlay()}
+        // onMouseOver={() => topSlider.slickPause()}
+        // onMouseOut={() => topSlider.slickPlay()}
       >
         <Slider
           ref={(slider) => updateBotSlider(slider)}
