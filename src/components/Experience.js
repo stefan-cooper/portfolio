@@ -88,10 +88,10 @@ const Experience = () => {
           focusOnSelect
           centerMode
           className="slider"
-          // infinite
-          // autoplay
+          infinite
+          autoplay
           asNavFor={botSlider}
-          // autoplaySpeed={3000}
+          autoplaySpeed={4000}
           speed={500}
           slidesToShow={3}
           responsive={[
@@ -110,8 +110,8 @@ const Experience = () => {
       </div>
       <div
         className="experiences-carousel"
-        // onMouseOver={() => topSlider.slickPause()}
-        // onMouseOut={() => topSlider.slickPlay()}
+        onMouseOver={() => topSlider.slickPause()}
+        onMouseOut={() => topSlider.slickPlay()}
       >
         <Slider
           ref={(slider) => updateBotSlider(slider)}
