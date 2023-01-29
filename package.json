@@ -68,9 +68,6 @@
     "*.{js, json, css, scss}": [
       "npm run prettier:write"
     ],
-    "*.png": [
-      "node compress_images.js"
-    ],
     "*.js": "npm run lint:fix"
   },
   "homepage": "https://stefancooper.com/"

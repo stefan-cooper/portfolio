@@ -17,11 +17,6 @@ $colour-5: #45a29e;
   display: flex;
   flex-direction: column;
   color: white;
-  // user-select: none;
-  // -moz-user-select: none;
-  // -khtml-user-select: none;
-  // -webkit-user-select: none;
-  // -ms-user-select: none;
 
   @media (max-width: 1000px) {
     height: fit-content;

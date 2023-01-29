@@ -83,9 +83,14 @@
   transform: scale(0.9);
 }
 
+.slick-initialized .slick-slide.slick-active {
+  z-index: 1;
+}
+
 .experience-data {
   display: flex !important;
   flex-direction: row;
+  visibility: visible;
 }
 
 .experience-extra {
@@ -94,7 +99,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  // text-align: center;
 
   @media (max-width: 1000px) {
     width: 90% !important;

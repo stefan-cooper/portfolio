@@ -5,7 +5,7 @@ import "../styling/experiences.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Heading, Link, Tag } from "@chakra-ui/react";
+import { Heading, Tag } from "@chakra-ui/react";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
@@ -33,8 +33,8 @@ const Experience = () => {
     const { time, github, link, role, head } = pf && pf.details;
 
     return (
-      <div className="experience-data">
-        <div key={pf.title} className={"experience-text"}>
+      <div key={pf.title} className="experience-data">
+        <div className={"experience-text"}>
           <Heading size={"md"}>{pf.title}</Heading>
           <p>{pf.description}</p>
           <br />
@@ -74,8 +74,8 @@ const Experience = () => {
     );
   });
 
-  // TODO - remove this when other experiences text are ready
-  const limitToFour = (arr) => arr.filter((_, i) => i < 4);
+  // // TODO - remove this when other experiences text are ready
+  const limit = (arr) => arr.filter((_, i) => i < 8);
 
   return (
     <div className="experiences">
@@ -105,7 +105,7 @@ const Experience = () => {
             },
           ]}
         >
-          {limitToFour(experiencesAsPortfolios())}
+          {limit(experiencesAsPortfolios())}
         </Slider>
       </div>
       <div
@@ -125,7 +125,7 @@ const Experience = () => {
           speed={500}
           slidesToShow={1}
         >
-          {limitToFour(descriptions)}
+          {limit(descriptions)}
         </Slider>
       </div>
     </div>
