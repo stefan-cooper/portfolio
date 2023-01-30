@@ -117,9 +117,9 @@
   "nesaWebsite": {
     "key": "nesaWebsite",
     "title": "NESA Website",
-    "description": "lorem ipsum",
-    "subtitle": "Additional Use Cases",
-    "subdescription": "lorem ipsum",
+    "description": "A modern esports event organiser needs a modern and fresh website. I designed and developed the website for NESA to help guide and show off some of the best bits about NESA, as well as be a landing page for all our links.",
+    "subtitle": "Technologies",
+    "subdescription": "This was developed using a React frontend. Additionally, I had started some work to integrate with Discord and using a MongoDB to fit a tournament organisation system, this never saw the light of day as we had a sufficient system with NUEL. Finally, during this project I built a blog/article page from scratch which allowed us to communicate with our members in a open and direct manner.",
     "image": "nesa.com.png",
     "role": "Project",
     "tags": ["React", "Node.js", "Discord", "MongoDB", "Blogs"],

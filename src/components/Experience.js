@@ -75,7 +75,7 @@ const Experience = () => {
   });
 
   // // TODO - remove this when other experiences text are ready
-  const limit = (arr) => arr.filter((_, i) => i < 8);
+  const limit = (arr) => arr.filter((_, i) => i < 9);
 
   return (
     <div className="experiences">
