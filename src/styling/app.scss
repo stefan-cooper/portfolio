@@ -8,137 +8,33 @@ $colour-3: #c5c6c7;
 $colour-4: #66fcf1;
 $colour-5: #45a29e;
 
-// Specific
+// Slick overrides
 
-.everything {
-  text-align: center;
-  background-image: repeating-linear-gradient($colour-2 100%, $colour-1 200%, $colour-2 300%);
-  height: 310vh;
-  display: flex;
-  flex-direction: column;
-  color: white;
+.slider {
+  width: 80%;
+  height: 20rem;
+  margin: 5rem;
 
   @media (max-width: 1000px) {
-    height: fit-content;
+    margin: unset;
+    width: 80%;
+    height: unset;
   }
 }
 
-.reconstruction-alert {
-  position: fixed;
-  margin: 1rem;
-  width: 50%;
-  color: $colour-2;
-  z-index: 1000;
-
-  @media (max-width: 1000px) {
-    width: calc(100% - 2rem);
-    margin: 1rem;
-  }
+.slick-center {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-.stefancooper {
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
+.slick-slide:not(.slick-current) {
+  opacity: 0.4;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  transform: scale(0.9);
 }
 
-.title {
-  font-family: BuiltSB;
-  font-size: 12vw;
-  background-clip: text;
-  background-image: linear-gradient(45deg, $colour-4, $colour-5);
-  -webkit-text-fill-color: transparent;
-
-  @media (max-width: 1000px) {
-    font-size: 5rem;
-  }
-}
-
-.esportshub {
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  color: white;
-  justify-content: space-between;
-
-  @media (max-width: 1000px) {
-    flex-direction: column;
-    justify-content: flex-start;
-    height: fit-content;
-  }
-}
-
-.portfolio-position {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  @media (max-width: 1000px) {
-    align-self: center;
-    width: 90%;
-  }
-}
-
-.paperclicker {
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: row-reverse;
-  color: white;
-  align-items: center;
-  justify-content: space-between;
-
-  @media (max-width: 1000px) {
-    flex-direction: column;
-    justify-content: flex-start;
-    height: fit-content;
-  }
-}
-
-// General
-
-.center {
-  align-self: center;
-}
-
-// General Chevron stuff
-
-.chevron::before {
-  border-style: solid;
-  border-width: 0.25em 0.25em 0 0;
-  content: "";
-  display: inline-block;
-  height: 1em;
-  transform: rotate(-45deg);
-  vertical-align: top;
-  width: 1em;
-  cursor: pointer;
-  color: white;
-  margin: 0.5rem;
-}
-
-.chevron.left:before {
-  left: 0.25em;
-  transform: rotate(-135deg);
-}
-
-.chevron.right:before {
-  left: 0;
-  transform: rotate(45deg);
-}
-
-.chevron.up:before {
-  left: 0.25em;
-  transform: rotate(-45deg);
-}
-
-.chevron.down:before {
-  left: 0;
-  transform: rotate(135deg);
+.slick-initialized .slick-slide.slick-active {
+  z-index: 1;
 }

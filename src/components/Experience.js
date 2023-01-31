@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { experiences } from "./Assets";
 import { SmallPortfolio } from "./Portfolios";
-import "../styling/experiences.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -33,8 +32,8 @@ const Experience = () => {
     const { time, github, link, role, head } = pf && pf.details;
 
     return (
-      <div key={pf.title} className="experience-data">
-        <div className={"experience-text"}>
+      <div key={pf.title} className="flex flex-row visible">
+        <div className="max-md:w-full max-lg:mt-8 w-3/5 flex justify-start items-start flex-col text-left">
           <Heading size={"md"}>{pf.title}</Heading>
           <p>{pf.description}</p>
           <br />
@@ -43,31 +42,39 @@ const Experience = () => {
           <br />
           <div>
             {pf.tags.map((tag) => {
-              return <Tag key={tag} size={"lg"} className="experience__tag">{`#${tag}`}</Tag>;
+              return <Tag key={tag} size={"lg"} className="m-1">{`#${tag}`}</Tag>;
             })}
           </div>
         </div>
-        <div className={"experience-extra"}>
-          {head ? (
-            <>
-              <Heading>{head}</Heading>
-              <br />
-            </>
-          ) : null}
-          {time ? <Heading>{time}</Heading> : null}
-          {role ? <Heading>{role}</Heading> : null}
-          <br />
-          <div>
-            {link ? (
-              <a key={link} target="_blank" rel="noopener noreferrer" href={link}>
-                <FontAwesomeIcon className="experience-image" icon={faLink} />
-              </a>
+        <div className="max-md:hidden w-2/5 flex justify-center items-center flex-col">
+          <div className="flex-col max-md:hidden visible">
+            {head ? (
+              <>
+                <Heading>{head}</Heading>
+                <br />
+              </>
             ) : null}
-            {github ? (
-              <a key={github} target="_blank" rel="noopener noreferrer" href={github}>
-                <FontAwesomeIcon className="experience-image" icon={faGithub} />
-              </a>
-            ) : null}
+            {time ? <Heading>{time}</Heading> : null}
+            {role ? <Heading>{role}</Heading> : null}
+            <br />
+            <div className="flex flex-row self-center justify-center w-full">
+              {link ? (
+                <a key={link} target="_blank" rel="noopener noreferrer" href={link}>
+                  <FontAwesomeIcon
+                    className="mr-4 w-16 h-16 text-white hover:opacity-75"
+                    icon={faLink}
+                  />
+                </a>
+              ) : null}
+              {github ? (
+                <a key={github} target="_blank" rel="noopener noreferrer" href={github}>
+                  <FontAwesomeIcon
+                    className="mr-4 w-16 h-16 text-white hover:opacity-75"
+                    icon={faGithub}
+                  />
+                </a>
+              ) : null}
+            </div>
           </div>
         </div>
       </div>
@@ -78,8 +85,8 @@ const Experience = () => {
   const limit = (arr) => arr.filter((_, i) => i < 9);
 
   return (
-    <div className="experiences">
-      <div className="experiences-carousel">
+    <div className="text-center h-[110vh] flex flex-col overflow-x-hidden overflow-y-hidden">
+      <div className="flex justify-center items-center w-full">
         <Slider
           ref={(slider) => updateTopSlider(slider)}
           arrows={false}
@@ -109,7 +116,7 @@ const Experience = () => {
         </Slider>
       </div>
       <div
-        className="experiences-carousel"
+        className="flex justify-center items-center w-full"
         onMouseOver={() => topSlider.slickPause()}
         onMouseOut={() => topSlider.slickPlay()}
       >
