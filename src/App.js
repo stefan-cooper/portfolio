@@ -27,7 +27,7 @@ const App = () => {
           </Alert>
         </div>
       ) : null}
-      <div className="text-center h-screen flex flex-col justify-center">
+      <div className="fade-in text-center h-screen flex flex-col justify-center">
         <p className="font-built-sb text-[12vw] bg-gradient-to-t from-cyan-400 to-neutral-400 bg-clip-text text-transparent">
           S T E F A N <br /> C O O P E R
         </p>
