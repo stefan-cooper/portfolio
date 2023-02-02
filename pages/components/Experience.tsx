@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { experiences } from "./Assets";
-import { portfolio, SmallPortfolio } from "./Portfolios";
+import SmallPortfolio, { portfolio } from "./Portfolios";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { Heading, Tag } from "@chakra-ui/react";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FunctionComponent } from "react";
+import experiencesJson from "../assets/experience.json";
+
+const experiences = (): Array<portfolio> => Object.values(experiencesJson);
 
 const experiencesAsPortfolios = (): Array<React.ReactNode> => {
   return experiences().map((experience, i) => {
@@ -16,7 +16,7 @@ const experiencesAsPortfolios = (): Array<React.ReactNode> => {
   });
 };
 
-export const Experience: FunctionComponent = () => {
+const Experience: FunctionComponent = () => {
   const [topSlider, updateTopSlider] = useState({
     slickPause: () => {},
     slickPlay: () => {},
@@ -31,7 +31,7 @@ export const Experience: FunctionComponent = () => {
     const { time, github, link, role, head } = details;
 
     return (
-      <div key={title} className="flex flex-row visible">
+      <div key={title} className="flex flex-row visible ">
         <div className="max-md:w-full max-lg:mt-8 w-3/5 flex justify-start items-start flex-col text-left">
           <Heading size={"md"}>{title}</Heading>
           <p>{description}</p>
@@ -85,7 +85,7 @@ export const Experience: FunctionComponent = () => {
 
   return (
     <div className="text-center h-[110vh] flex flex-col overflow-x-hidden overflow-y-hidden">
-      <div className="flex justify-center items-center w-full">
+      <div className="justify-center items-center w-full flex">
         <Slider
           ref={(slider) => updateTopSlider(slider)}
           arrows={false}
@@ -95,10 +95,10 @@ export const Experience: FunctionComponent = () => {
           centerMode
           className="slider"
           infinite
-          autoplay
+          // autoplay
           // @ts-ignore-next
           asNavFor={botSlider}
-          autoplaySpeed={4000}
+          // autoplaySpeed={4000}
           speed={500}
           slidesToShow={3}
           responsive={[
@@ -117,8 +117,8 @@ export const Experience: FunctionComponent = () => {
       </div>
       <div
         className="flex justify-center items-center w-full"
-        onMouseOver={() => topSlider.slickPause()}
-        onMouseOut={() => topSlider.slickPlay()}
+        // onMouseOver={() => topSlider.slickPause()}
+        // onMouseOut={() => topSlider.slickPlay()}
       >
         <Slider
           ref={(slider) => updateBotSlider(slider)}
@@ -141,3 +141,4 @@ export const Experience: FunctionComponent = () => {
 };
 
 Experience.displayName = "Experience";
+export default Experience;

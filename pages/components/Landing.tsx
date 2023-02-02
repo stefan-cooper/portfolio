@@ -1,14 +1,24 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
-import "../styling/app.css";
-import { Experience } from "./Experience";
-import { addScrollReveals } from "../scrollReveal";
+import React, { FunctionComponent, useState, useEffect } from "react";
+import Experience from "./Experience";
 import { Alert, AlertDescription, AlertIcon, CloseButton } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-export const Landing: FunctionComponent = () => {
+const Landing: FunctionComponent = () => {
+  const refToComponent = React.useRef(null);
+
   useEffect(() => {
-    addScrollReveals();
+    const animate = async () => {
+      if (refToComponent.current) {
+        const sr = (await import("scrollreveal")).default;
+        sr().reveal(refToComponent.current, {
+          origin: "bottom",
+          duration: 2000,
+          opacity: 0,
+        });
+      }
+    };
+    animate();
   }, []);
 
   const [renderAlert, updateRenderAlert] = useState<boolean>(true);
@@ -27,7 +37,7 @@ export const Landing: FunctionComponent = () => {
           </Alert>
         </div>
       ) : null}
-      <div className="fade-in text-center h-screen flex flex-col justify-center">
+      <div ref={refToComponent} className="text-center h-screen flex flex-col justify-center">
         <p className="font-built-sb text-[12vw] bg-gradient-to-t from-cyan-400 to-neutral-400 bg-clip-text text-transparent">
           S T E F A N <br /> C O O P E R
         </p>
@@ -38,7 +48,7 @@ export const Landing: FunctionComponent = () => {
           <img
             alt="My face!"
             className="w-auto rounded-3xl self-center"
-            src={require("../images/about.png")}
+            src={"/images/about.png"}
           ></img>
         </div>
         <div className="flex flex-col w-full self-center">
@@ -83,3 +93,5 @@ export const Landing: FunctionComponent = () => {
 };
 
 Landing.displayName = "Landing";
+
+export default Landing;

@@ -1,17 +1,15 @@
 {
-  "universityOfHertfordshire": {
-    "key": "universityOfHertfordshire",
-    "title": "Computer Science (Software Engineering) (2016-2020)",
-    "description": "I have grown a lot throughout my time at university, achieving a First Class with Honours averaging an 84% across my modules. Notable module grades include Software Engineering Practice (94%), Mobile Computing (85%) and Software Engineering Project (84%). Furthermore, I have interacted with many extra-curricular activities such as working on the Esports Society and being a voting member on the Student Council.",
-    "subtitle": "Projects and Experiences",
-    "subdescription": "At university, I was given the opportunity to work on a variety of different projects to expand my skillset. In Mobile Computing I learned all about developing on Apple products, learning Swift to make a small iOS game. In Software Engineering Practice and Object-Oriented Programming I furthered my skills and understanding of object-oriented programming in Java.",
-    "image": "uh.png",
-    "role": "Degree",
-    "tags": ["Best practices", "Education"],
+  "kafkaMinecraft": {
+    "key": "kafkaMinecraft",
+    "title": "Kafka for Minecraft",
+    "description": "Kafka minecraft is a side project that I have worked on in my spare time as an experimentation to enhance my knowledge of the Spigot API, and how it can be utilised with Kafka to omit events about Minecraft for third party apps to interact with.",
+    "subtitle": "Use cases",
+    "subdescription": "This project is really cool, and given more time could be very useful! I anticipate many cool third party usages including mobile notifications for users interacting with a Minecraft server in various ways. One cool example of this is a 'Ding' doorbell where users could essentially have a doorbell on their home in minecraft to get alerts when other users walk past or ring the doorbell. Other use cases include more generic meta data (user joins a server, disconnects, etc) - I can see these being really useful for omitting and posting to Discord servers, potentially to even build a connection between Discord messages and in game minecraft messages.",
+    "image": "kafka.png",
+    "role": "Project",
+    "tags": ["Kafka", "Java", "Spigot"],
     "details": {
-      "head": "Computer Science (Software Engineering)",
-      "role": "First Class (84%)",
-      "time": "2016-2020"
+      "github": "https://github.com/stefan-cooper/KafkaMinecraft-Events"
     }
   },
   "ibm": {
@@ -28,17 +26,20 @@
       "link": "https://www.ibm.com/docs/en/cloud-paks/cp-integration/2021.1?topic=runtimes-event-endpoint-management-deployment"
     }
   },
-  "kafkaMinecraft": {
-    "key": "kafkaMinecraft",
-    "title": "Kafka for Minecraft",
-    "description": "Kafka minecraft is a side project that I have worked on in my spare time as an experimentation to enhance my knowledge of the Spigot API, and how it can be utilised with Kafka to omit events about Minecraft for third party apps to interact with.",
-    "subtitle": "Use cases",
-    "subdescription": "This project is really cool, and given more time could be very useful! I anticipate many cool third party usages including mobile notifications for users interacting with a Minecraft server in various ways. One cool example of this is a 'Ding' doorbell where users could essentially have a doorbell on their home in minecraft to get alerts when other users walk past or ring the doorbell. Other use cases include more generic meta data (user joins a server, disconnects, etc) - I can see these being really useful for omitting and posting to Discord servers, potentially to even build a connection between Discord messages and in game minecraft messages.",
-    "image": "kafka.png",
+  "esportsHub": {
+    "key": "esportsHub",
+    "title": "Esports Hub for University Esports",
+    "description": "This was my final year project, in which I completed a formal dissertation to discuss the practises that I followed and how well my project achieved its' goals and objectives.",
+    "subtitle": "What is it?",
+    "subdescription": "This project aims to create a website for enthusiastic esports students that will serve as a hub for everything-esports. This project tries to solve the difficulties surrounding staying up to date with university esports news and managing esports teams at university. I have used modern technologies such as Express.js to build a backend model to connect to an IBM Cloudant database and external APIs such as Twitter and Discord. A React frontend has been developed to implement an interactive and scalable user interface. A collaborative news feed has been developed, as well as a sophisticated scheduling system for students planning their esports life.",
+    "image": "eh.png",
     "role": "Project",
-    "tags": ["Kafka", "Java", "Spigot"],
+    "tags": ["React", "Express.js", "Discord", "Twitter"],
     "details": {
-      "github": "https://github.com/stefan-cooper/KafkaMinecraft-Events"
+      "head": "Final year project",
+      "time": "2019-2020",
+      "github": "https://github.com/stefan-cooper/esportshub",
+      "link": "https://hub.stefancooper.com"
     }
   },
   "nesa": {
@@ -98,22 +99,22 @@
       "github": "https://github.com/hertsgg/HousesBot"
     }
   },
-  "esportsHub": {
-    "key": "esportsHub",
-    "title": "Esports Hub for University Esports",
-    "description": "This was my final year project, in which I completed a formal dissertation to discuss the practises that I followed and how well my project achieved its' goals and objectives.",
-    "subtitle": "What is it?",
-    "subdescription": "This project aims to create a website for enthusiastic esports students that will serve as a hub for everything-esports. This project tries to solve the difficulties surrounding staying up to date with university esports news and managing esports teams at university. I have used modern technologies such as Express.js to build a backend model to connect to an IBM Cloudant database and external APIs such as Twitter and Discord. A React frontend has been developed to implement an interactive and scalable user interface. A collaborative news feed has been developed, as well as a sophisticated scheduling system for students planning their esports life.",
-    "image": "eh.png",
-    "role": "Project",
-    "tags": ["React", "Express.js", "Discord", "Twitter"],
+  "universityOfHertfordshire": {
+    "key": "universityOfHertfordshire",
+    "title": "Computer Science (Software Engineering) (2016-2020)",
+    "description": "I have grown a lot throughout my time at university, achieving a First Class with Honours averaging an 84% across my modules. Notable module grades include Software Engineering Practice (94%), Mobile Computing (85%) and Software Engineering Project (84%). Furthermore, I have interacted with many extra-curricular activities such as working on the Esports Society and being a voting member on the Student Council.",
+    "subtitle": "Projects and Experiences",
+    "subdescription": "At university, I was given the opportunity to work on a variety of different projects to expand my skillset. In Mobile Computing I learned all about developing on Apple products, learning Swift to make a small iOS game. In Software Engineering Practice and Object-Oriented Programming I furthered my skills and understanding of object-oriented programming in Java.",
+    "image": "uh.png",
+    "role": "Degree",
+    "tags": ["Best practices", "Education"],
     "details": {
-      "head": "Final year project",
-      "time": "2019-2020",
-      "github": "https://github.com/stefan-cooper/esportshub",
-      "link": "https://hub.stefancooper.com"
+      "head": "Computer Science (Software Engineering)",
+      "role": "First Class (84%)",
+      "time": "2016-2020"
     }
   },
+
   "nesaWebsite": {
     "key": "nesaWebsite",
     "title": "NESA Website",

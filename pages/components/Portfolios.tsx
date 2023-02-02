@@ -20,14 +20,14 @@ export interface portfolio {
   };
 }
 
-export const SmallPortfolio = ({ image, tags, role, key }: portfolio) => {
+const SmallPortfolio = ({ image, role, key }: portfolio) => {
   return (
     <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} key={key}>
       <div className="h-40 m-12 self-center flex flex-col justify-center items-center -z-10 max-lg:m-0 max-lg:h-32 max-lg:pr-12 max-lg:w-full">
         <img
           alt="Experience Logo"
           className="max-w-[80%] h-auto max-h-[90%]"
-          src={require(`../images/${image}`)}
+          src={`/images/${image}`}
         />
       </div>
       <div className="text-white text-base w-[20vw] whitespace-pre-wrap m-4">
@@ -40,3 +40,5 @@ export const SmallPortfolio = ({ image, tags, role, key }: portfolio) => {
     </motion.button>
   );
 };
+
+export default SmallPortfolio;
