@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import "./styling/app.scss";
-import Experience from "./components/Experience";
-import { addScrollReveals } from "./scrollReveal";
+import React, { FunctionComponent, useEffect, useState } from "react";
+import "../styling/app.css";
+import { Experience } from "./Experience";
+import { addScrollReveals } from "../scrollReveal";
 import { Alert, AlertDescription, AlertIcon, CloseButton } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const App = () => {
+export const Landing: FunctionComponent = () => {
   useEffect(() => {
     addScrollReveals();
   }, []);
 
-  const [renderAlert, updateRenderAlert] = useState(true);
+  const [renderAlert, updateRenderAlert] = useState<boolean>(true);
 
   return (
     <div className="text-center bg-gradient-to-t from-cyan-900 to-neutral-900 flex flex-col text-white">
@@ -38,7 +38,7 @@ const App = () => {
           <img
             alt="My face!"
             className="w-auto rounded-3xl self-center"
-            src={require("./images/about.png")}
+            src={require("../images/about.png")}
           ></img>
         </div>
         <div className="flex flex-col w-full self-center">
@@ -82,4 +82,4 @@ const App = () => {
   );
 };
 
-export default App;
+Landing.displayName = "Landing";

@@ -8,7 +8,7 @@ I am aware that some of the links and github urls will be private/down. Please c
 
 You can run the portfolio locally using the following command.
 
-`npm start`
+`npm i && npm start`
 
 ### Links
 

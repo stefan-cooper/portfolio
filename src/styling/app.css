@@ -1,6 +1,6 @@
-@import "./fonts.scss";
+@import "./fonts.css";
 
-// Slick overrides
+/* Slick overrides */
 
 .slider {
   width: 80%;

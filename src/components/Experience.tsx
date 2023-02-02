@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { experiences } from "./Assets";
-import { SmallPortfolio } from "./Portfolios";
+import { portfolio, SmallPortfolio } from "./Portfolios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,40 +8,39 @@ import { Heading, Tag } from "@chakra-ui/react";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FunctionComponent } from "react";
 
-export const experiencesAsPortfolios = () => {
+const experiencesAsPortfolios = (): Array<React.ReactNode> => {
   return experiences().map((experience, i) => {
-    return (
-      <div key={i}>
-        {SmallPortfolio({
-          index: i,
-          image: experience.image,
-          tags: experience.tags,
-          role: experience.role,
-        })}
-      </div>
-    );
+    return <div key={i}>{SmallPortfolio(experience)}</div>;
   });
 };
 
-const Experience = () => {
-  const [topSlider, updateTopSlider] = useState();
-  const [botSlider, updateBotSlider] = useState();
+export const Experience: FunctionComponent = () => {
+  const [topSlider, updateTopSlider] = useState({
+    slickPause: () => {},
+    slickPlay: () => {},
+  });
+  const [botSlider, updateBotSlider] = useState({
+    slickPause: () => {},
+    slickPlay: () => {},
+  });
 
-  const descriptions = experiences().map((pf) => {
-    const { time, github, link, role, head } = pf && pf.details;
+  const descriptions = experiences().map((pf: portfolio) => {
+    const { title, subtitle, description, tags, subdescription, details } = pf;
+    const { time, github, link, role, head } = details;
 
     return (
-      <div key={pf.title} className="flex flex-row visible">
+      <div key={title} className="flex flex-row visible">
         <div className="max-md:w-full max-lg:mt-8 w-3/5 flex justify-start items-start flex-col text-left">
-          <Heading size={"md"}>{pf.title}</Heading>
-          <p>{pf.description}</p>
+          <Heading size={"md"}>{title}</Heading>
+          <p>{description}</p>
           <br />
-          <Heading size={"md"}>{pf.subtitle}</Heading>
-          <p>{pf.subdescription}</p>
+          <Heading size={"md"}>{subtitle}</Heading>
+          <p>{subdescription}</p>
           <br />
           <div>
-            {pf.tags.map((tag) => {
+            {tags.map((tag) => {
               return <Tag key={tag} size={"lg"} className="m-1">{`#${tag}`}</Tag>;
             })}
           </div>
@@ -81,8 +80,8 @@ const Experience = () => {
     );
   });
 
-  // // TODO - remove this when other experiences text are ready
-  const limit = (arr) => arr.filter((_, i) => i < 9);
+  // TODO - remove this when other experiences text are ready
+  const limit = (arr: Array<React.ReactNode>) => arr.filter((_, i) => i < 9);
 
   return (
     <div className="text-center h-[110vh] flex flex-col overflow-x-hidden overflow-y-hidden">
@@ -97,6 +96,7 @@ const Experience = () => {
           className="slider"
           infinite
           autoplay
+          // @ts-ignore-next
           asNavFor={botSlider}
           autoplaySpeed={4000}
           speed={500}
@@ -125,6 +125,7 @@ const Experience = () => {
           arrows={false}
           pauseOnHover
           pauseOnFocus
+          // @ts-ignore-next
           asNavFor={topSlider}
           className="slider"
           infinite
@@ -139,4 +140,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+Experience.displayName = "Experience";
