@@ -29,11 +29,11 @@
   "scripts": {
     "start": "next dev",
     "prod": "next start",
-    "build": "next build && next export -o build/",
+    "build": "next build && next export -o build/ && touch ./build/.nojekyll",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -t true",
     "prettier": "prettier . --check",
     "prettier:write": "prettier ./pages/**/* --write",
     "lint": "eslint pages",

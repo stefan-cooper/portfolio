@@ -20,10 +20,10 @@ code {
 
 @font-face {
   font-family: "built-titling-sb";
-  src: local("build-titling-sb"), url("../fonts/built-titling-sb.ttf") format("truetype");
+  src: local("build-titling-sb"), url("../public/built-titling-sb.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "built-titling-rg";
-  src: local("build-titling-rg"), url("../fonts/built-titling-rg.ttf") format("truetype");
+  src: local("build-titling-rg"), url("../public/built-titling-rg.ttf") format("truetype");
 }
