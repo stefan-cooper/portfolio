@@ -20,10 +20,16 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "Components": ["./components"],
+      "Pages": ["./pages"]
+    }
   },
   "include": [
     "pages/**/*.ts*",
+    "components/**/*.ts*"
   ],
   "exclude": [
     "node_modules",

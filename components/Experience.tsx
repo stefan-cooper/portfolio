@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import SmallPortfolio, { portfolio } from "./Portfolios";
+import React, { useState, FunctionComponent } from "react";
+import type { portfolio } from "./Portfolios";
+import { SmallPortfolio } from "Components";
 import Slider from "react-slick";
 import { Heading, Tag } from "@chakra-ui/react";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { FunctionComponent } from "react";
-import experiencesJson from "../assets/experience.json";
+import experiencesJson from "../pages/assets/experience.json";
 
 const experiences = (): Array<portfolio> => Object.values(experiencesJson);
 
@@ -95,10 +95,10 @@ const Experience: FunctionComponent = () => {
           centerMode
           className="slider"
           infinite
-          // autoplay
+          autoplay
           // @ts-ignore-next
           asNavFor={botSlider}
-          // autoplaySpeed={4000}
+          autoplaySpeed={4000}
           speed={500}
           slidesToShow={3}
           responsive={[

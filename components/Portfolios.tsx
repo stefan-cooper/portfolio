@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
@@ -20,7 +20,7 @@ export interface portfolio {
   };
 }
 
-const SmallPortfolio = ({ image, role, key }: portfolio) => {
+const SmallPortfolio: FunctionComponent = ({ image, role, key }: portfolio) => {
   return (
     <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} key={key}>
       <div className="h-40 m-12 self-center flex flex-col justify-center items-center -z-10 max-lg:m-0 max-lg:h-32 max-lg:pr-12 max-lg:w-full">
