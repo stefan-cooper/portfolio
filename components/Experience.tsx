@@ -31,12 +31,16 @@ const Experience: FunctionComponent = () => {
     const { time, github, link, role, head } = details;
 
     return (
-      <div key={title} className="flex flex-row visible ">
+      <div key={title} className="flex flex-row visible">
         <div className="max-md:w-full max-lg:mt-8 w-3/5 flex justify-start items-start flex-col text-left">
-          <Heading size={"md"}>{title}</Heading>
+          <Heading as="h4" size={"md"}>
+            {title}
+          </Heading>
           <p>{description}</p>
           <br />
-          <Heading size={"md"}>{subtitle}</Heading>
+          <Heading as="h4" size={"md"}>
+            {subtitle}
+          </Heading>
           <p>{subdescription}</p>
           <br />
           <div>
@@ -49,12 +53,12 @@ const Experience: FunctionComponent = () => {
           <div className="flex-col max-md:hidden visible">
             {head ? (
               <>
-                <Heading>{head}</Heading>
+                <Heading as="h5">{head}</Heading>
                 <br />
               </>
             ) : null}
-            {time ? <Heading>{time}</Heading> : null}
-            {role ? <Heading>{role}</Heading> : null}
+            {time ? <Heading as="h5">{time}</Heading> : null}
+            {role ? <Heading as="h5">{role}</Heading> : null}
             <br />
             <div className="flex flex-row self-center justify-center w-full">
               {link ? (
@@ -84,8 +88,8 @@ const Experience: FunctionComponent = () => {
   const limit = (arr: Array<React.ReactNode>) => arr.filter((_, i) => i < 9);
 
   return (
-    <div className="text-center h-[110vh] flex flex-col overflow-x-hidden overflow-y-hidden">
-      <div className="justify-center items-center w-full flex">
+    <div className="text-center min-h-[100vh] max-h-[120vh] flex flex-col overflow-x-hidden overflow-y-hidden max-xl:h-[150vh]">
+      <div className="justify-center items-center w-full flex max-lg:h-[35vh]">
         <Slider
           ref={(slider) => updateTopSlider(slider)}
           arrows={false}
@@ -116,9 +120,9 @@ const Experience: FunctionComponent = () => {
         </Slider>
       </div>
       <div
-        className="flex justify-center items-center w-full"
-        // onMouseOver={() => topSlider.slickPause()}
-        // onMouseOut={() => topSlider.slickPlay()}
+        className="flex justify-center items-center w-full max-lg:h-[30vh]"
+        onMouseOver={() => topSlider.slickPause()}
+        onMouseOut={() => topSlider.slickPlay()}
       >
         <Slider
           ref={(slider) => updateBotSlider(slider)}
