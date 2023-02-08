@@ -11,6 +11,8 @@ const Index = () => {
     <div>
       <Head>
         <title>{title}</title>
+        <link rel="icon" href={"/favicon.ico"}></link>
+        <meta name="author" content="Stefan Cooper" />
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
