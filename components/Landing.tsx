@@ -79,7 +79,7 @@ const Landing: FunctionComponent = () => {
       </div>
       <Experience />
       {renderAlert ? (
-        <div className="fixed m-4 w-1/2 text-slate-900 z-50 text-left">
+        <div className="fixed bottom-0 left-0 m-4 w-1/2 text-slate-900 z-50 text-left">
           <Alert status="warning">
             <AlertIcon />
             <AlertDescription>

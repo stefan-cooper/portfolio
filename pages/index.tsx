@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { Landing } from "Components";
+import { Navbar } from "components/Navbar";
 
 const description =
   "A small React-based portfolio to exhibit some of my work experiences and miscellaneous projects that I have worked on.";
@@ -22,6 +23,7 @@ const Index = () => {
         <meta name="keywords" content="Stefan Cooper, stefan cooper portfolio" />
         <meta name="robots" content="all" />
       </Head>
+      <Navbar />
       <Landing />
     </div>
   );
